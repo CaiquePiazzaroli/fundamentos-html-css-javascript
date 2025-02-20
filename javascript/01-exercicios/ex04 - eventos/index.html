@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body>
+    <button class="botao">
+        Mudar cor
+    </button>
+    <p style="display: none;">Teste</p>
+</body>
+<script>
+    const btn = document.querySelector("button");
+
+    function random(number) {
+        return Math.floor(Math.random() * (number + 1));
+    }
+
+    btn.addEventListener("click", () => {
+        const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+        document.body.style.backgroundColor = rndCol;
+    });
+
+    btn.addEventListener("click", () => {
+        const p = document.querySelector("p");
+        p.style.display="block";
+    })
+
+</script>
+</html>

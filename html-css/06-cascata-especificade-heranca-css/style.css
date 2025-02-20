@@ -1,0 +1,97 @@
+*{
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+table, th, caption, td{
+    border: black 1px solid;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+th, caption {
+    background-color: aliceblue;
+    font-style: italic;
+}
+
+
+/*Duas regras de css aplicados à mesma classe, mas apenas a segunda funciona! */
+.cascata {
+    background-color: aquamarine;
+}
+
+.cascata{
+    background-color: beige;
+    color: brown;
+}
+
+/*.especificidade tem prioridade sobre o li pois é mais específico*/
+.especificidade {
+    background-color: darkgoldenrod;
+}
+
+li {
+    background-color: rgb(83, 11, 184);
+    color: rgb(196, 244, 148);
+}
+
+
+/*Controlando a herança */
+.div-1{
+    color: blue;
+}
+
+.span-1{
+    /*Ativa a herança*/
+    color: inherit;
+}
+
+.div-2{
+    color: blue;
+}
+
+.span-2{
+    /*Ativa o estado inicial*/
+    color: initial;
+}
+
+.div-3{
+    color: blue;
+}
+
+.a-3{
+    /*Ativa o estilo padrao do navegador*/
+    color: revert;
+}
+
+.div-4{
+    color: blue;
+}
+
+.span-4{
+    /* Ativa o estado padrao da tag, independentemente de qual seja*/
+    color: unset;
+}
+
+
+/* Atributo all, reset de herança */
+.all{
+    color: rgb(42, 165, 165);
+    background-color: beige;
+}
+
+
+#all {
+    /*Aplica o controle de herança para todos os elementos da div*/
+    all:unset;
+}
+
+
+/*Esse css não sera aplicado a tag p pois existe um style inline aplicado sobre ela, que possui prioridade*/
+.p-1{
+    background-color: rgb(8, 0, 255);
+}
+
+#p-1 {
+    background-color: black;
+}

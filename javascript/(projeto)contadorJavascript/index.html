@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <style>
+        * {
+            font-size: 2em;
+        }
+
+        html {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+          
+        }
+
+        body {
+           
+            margin: auto;
+        }
+
+        p {
+            text-align: center;
+            font-size: 2em;
+            background-color: #9999ff;
+            border-radius: 10px;
+        }
+
+        button {
+            background-color: transparent;
+            border: none;
+            padding: 0.5em;
+            font-size: 1em;
+        }
+
+        button:hover {
+            background-color: #99ffff;
+            border: none;
+            padding: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <p></p>
+    <button class="subtrair">subtrair</button>
+    <button class="resetar">resetar</button>
+    <button class="somar">somar</button>
+
+
+    <script>
+        var somar = document.querySelector(".somar");
+        var sub = document.querySelector(".subtrair");
+        var reset = document.querySelector(".resetar");
+        var telaContador = document.querySelector("p");
+        var contador = 0;
+
+        telaContador.textContent = contador;
+        
+        sub.addEventListener("click", function () {
+            contador -= 1;
+            telaContador.textContent = contador;
+        })
+
+        somar.addEventListener("click", function () {
+            contador += 1;
+            telaContador.textContent = contador;
+        })
+
+        reset.addEventListener("click", function() {
+            contador = 0;
+            telaContador.textContent = contador;
+        })
+
+    </script>
+</body>
+</html>

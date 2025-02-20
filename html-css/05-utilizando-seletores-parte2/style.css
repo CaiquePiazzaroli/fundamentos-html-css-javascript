@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+html {
+    font-size: 20px;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.tiposSeletores {
+    background-color: blanchedalmond;
+    padding: 30px;
+    margin: 30px 30px 50px 30px;
+    border-radius: 25px;
+}
+
+p {
+    background-color: rgb(177, 104, 104);
+    
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    border: 2px solid rgb(200,200,200);
+    letter-spacing: 1px;
+    font-size: 0.7rem;
+    text-align: center;
+}
+  
+td, th, caption {
+    border: 1px solid rgb(190,190,190);
+    padding: 10px 20px;
+}
+
+th{
+    background-color: antiquewhite;
+}
+  
+  
+td {
+    text-align: center;
+}
+
+strong {
+    color: red;
+}
+
+
+
+
+/*Seletor de classe tem prioridade sobre o seletor de tags*/
+.seletorClasse {
+    background-color: rgb(173, 250, 224);
+}
+
+/*Estiliza da apenas os elementos que são da tag Span e possuem a classe SeletorClasse*/
+span.seletorClasse {
+    background-color: rgb(218, 139, 83);
+}
+
+/*Dois estilos de classes diferentes que são aplicados a um mesmo elemento html*/
+.borda {
+    border: red dotted;
+}
+
+.background {
+    background-color: rgb(143, 224, 251);
+}
+
+/*Esse estilo será aplicado quando um elemento html possuir as duas classes simultaneamente*/
+.infoBox {
+    background-color: slategrey;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.infoBox.warning {
+    border-radius: 25px;
+    padding: 10px;
+    background-color: rgb(248, 137, 41);
+}
+
+.infoBox.danger {
+    border-radius: 25px;
+    padding: 10px;
+    background-color: rgb(248, 41, 41);
+}
+
+
+
+/*Seletor de id tem prioridade sobre o seletor de classe e tags*/
+#seletorID {
+    background-color: rgb(174, 122, 222);
+}
+
+
+
+
+
+/*Estiliza os elementos que possuem o atributo title*/
+p[title]{
+    background-color: rgb(252, 234, 129);
+}
+
+/*Estiliza os elementos que possuem o atributo title com  o valor "Atributos2"*/
+p[title="atributos2"] {
+    border: solid black;
+}
+
+/*Estiliza os elementos html que possuem f como nome em sua classe"*/
+p[class~="f"]{
+    color: chartreuse;
+    background-color: black;
+}
+
+
+
+
+
+.pseudoClasses {
+    background-color: rgb(255, 101, 183);
+}
+
+/*Estiliza todos primeiros h2 de cada div*/
+div h2:first-child {
+    text-decoration: underline;
+}
+
+/*Estiliza o elemento quando a seta do mouse estiver sobre o elemento*/
+.pseudoClasses:hover {
+    background-color: rgb(242, 168, 208);
+    color: blue;
+}
+
+/*Adiciona conteudo string antes do elemento com a classe .afterBefore*/
+.afterBefore{
+    background-color: white;
+    padding: 25px;
+    border-radius: 50px;
+}
+
+.afterBefore::before {
+    color: rgb(115, 130, 247);
+    content: "Isso foi adiocionado utilizando o pseudo elemento before";
+}
+
+/*Adiciona conteudo string após do elemento com a classe .afterBefore*/
+.afterBefore::after {
+    color: rgb(223, 100, 254);
+    content: "Isso foi adiocionado utilizando o pseudo elemento after";
+}
+
+
+/*Estiliza a primeira linha do paragrafo*/
+.pseudoClassesPrimeiraLinha::first-line{
+    background-color: rgb(0, 255, 255);
+}
+
+
+
+
+/*Seleciona todas as tags p dentro do elemento que possui a classe combinadores*/
+.combinadores > p {
+    background-color: indigo;
+    color: aliceblue;
+}
+
+/*Estiliza todos os elementos que estão dentro do elemento que possui a classe seletorUniversal*/
+.seletorUniversal * {
+    background-color: rgb(198, 248, 124);
+    margin:2px;
+    border: solid black;
+}
+
+

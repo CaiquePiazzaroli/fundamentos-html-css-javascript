@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="principal">
+        <p class="tela">
+            <span class="minutos">0</span>
+            <span class="divisao__pontos">:</span>
+            <span class="segundos">0</span>
+        </p>
+        <span class="seleciona__tempo">
+            <p>Selecione o tempo</p>
+            <span class="config">
+                <input type="number" min="0" step="1" class="campoAlteraTempo" value="20">
+                <button class="confirmaAlt" for=".campoAlteraTempo">OK</button>
+            </span>    
+        </span>
+        <span class="inicio__fim">
+            <button class="iniciar">Iniciar</button>
+            <button class="fim">Pausar</button>
+        </span>
+        <span class="altera__background">
+            <button class="altera__background__botao">Background</button>
+        </span>
+    </main>
+</body>
+</html>

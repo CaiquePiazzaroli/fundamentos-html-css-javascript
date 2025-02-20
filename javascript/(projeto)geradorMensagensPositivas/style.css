@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+body {
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    font-size: 32px;
+    padding: 1em;
+    background-image: url(assets/background-anime.jpg);
+    background-size:cover;
+    color: aliceblue;
+    margin: 5em;
+}
+
+h1 {
+    font-size: 42px;
+    padding: 1em;
+}
+
+.historia {
+    padding: 1em;
+    font-size: 64px;
+    font-weight: 700;
+}
+
+h1, p, div {
+    padding: 1em;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.555);
+}
+
+
+.botao {
+    background-color: aliceblue;
+    border: none;
+    font-size: 1em;
+    font-weight:700;
+    font-family: 'Caveat', cursive;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.botao:hover {
+    background-color: rgb(35, 147, 245);
+    border: none;
+    font-size: 1em;
+    font-weight:700;
+    font-family: 'Caveat', cursive;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+
+@media screen and (max-width: 1200px) {
+    body {
+        margin:0
+    }
+
+    .historia {   
+        font-size: 32px;
+    }
+    
+
+    .botao {
+        background-color: aliceblue;
+        border: none;
+        font-size: 1em;
+        font-weight:700;
+        font-family: 'Caveat', cursive;
+        padding: 0.2em 0.5em;
+        border-radius: 0.5em;
+    }
+
+
+    .botao:hover {
+        background-color: rgb(35, 147, 245);
+        border: none;
+        font-size: 1em;
+        font-weight:700;
+        font-family: 'Caveat', cursive;
+        padding: 0.2em 0.5em;
+        border-radius: 0.5em;
+    }
+}

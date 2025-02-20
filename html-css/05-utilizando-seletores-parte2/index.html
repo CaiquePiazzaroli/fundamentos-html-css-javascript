@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores em css</title>
+    <link rel="stylesheet"  href="style.css">
+</head>
+<body>
+    <h1>Tipos de seletores em css</h1>
+    <!--Seletor de classe, id e de tipo (tags)-->
+    <div class="tiposSeletores">
+        <h2>Seletores de classe, ids e tags</h2>
+        
+        <p>Este paragrafo foi estilizado por um seletor de tag. Seletores de tag não são case sensitive, "h1" ou "H1" funcionarão.</p>
+        <p class="seletorClasse">Este paragrafo deveria ter sido afetado pelo seletor de tag acima, mas foi estilizado por um seletor de classe, que tem prioridade.</p>
+        <p class="seletorClasse" id="seletorID">
+            Este paragrafo deveria ser afetado pelo seletor de classe, mas foi estilizado utlizando o seletor de 
+            id, que tem prioridade sobre o seletor de classe. 
+        </p>
+        <span class="seletorClasse">
+            Todos os elementos que possuem a classe seletorClasse serão afetadas pelo css, no entanto, 
+            é possivel atribuir estilos diferentes para cada objeto que contem essa classe.
+            Essa tag span foi estilizada diferente das tags acima, mesmo contendo a mesma classe.
+        </span>
+
+        <p class="borda background">É possivel atribuir muitas classes a um mesmo elemento. A borda é definida por uma classe
+            e a tela de fundo por outra classe
+        </p>
+
+        <p class="infoBox">
+            Elemento que possui apenas uma classe.
+        </p>
+
+        <p class="infoBox warning">
+            Mas existe um outro caso que um estilo diferente só é aplicado quando um elemento html possui duas classes simultaneamente.
+            Pussi duas classe simutaneamente
+        </p>
+
+        <p class="infoBox danger">
+            Elemento com duas classes simultaneas mas se comporta diferente pois a classe é diferente
+        </p>
+
+        <p class="danger">
+            Esse elemento, mesmo contendo a classe danger, que deveria deixa o background-color em vermelho, não foi aplicado nenhum css 
+            pois a classe danger só é executada quando acompanhada da classe infoBox.
+        </p>
+
+    </div>
+
+    <!--Seletores de atributos-->
+    <div class="tiposSeletores">
+        <h2>Seletores de atributos</h2>
+        <p title="atributos">Este paragrafo está sendo estilizado utilizando o seletor de atributo title, todos os paragrafos com o 
+            atributo title serão estilizados. Mesmo que o valor dos atributos sejam diferentes.
+        </p>
+        <p title="atributos2">
+            Neste caso, o background color vem da regra que seleciona 
+            esse objeto pelo atributo: title, e a borda é estilizada utilizando o atributo title="atributos2". 
+            Que considera o valor do atributo.
+        </p>
+
+        <p class="abcde f">
+            Esse elemento foi estilizado utilizando o seletor de atributos p[class~="f"] {exemplo}, que 
+            verifica se na classe contém a letra f e, se caso existir, aplica o estilo.
+        </p>  
+        <table>
+            <caption>
+                Seletores de atributos
+            </caption>
+            <thead>
+                <th>Seletor</th>
+                <th>Exemplo</th>
+                <th>Descrição</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>[attr^=Value]</td>
+                    <td>li[class^="box-"]</td>
+                    <td>
+                        Seleciona o elemento que possui um atributo classe e que a classe <strong>comece</strong> com o valor especificado
+                        Nesse caso: seleciona o elemento que possui a classe que tem em seu valor o início "box-"
+                    </td>
+                </tr>
+                <tr>
+                    <td>[attr$=value]</td>
+                    <td>li[class$="-box"]</td>
+                    <td>
+                        Seleciona o elemento que possui um atributo classe e que a classe <strong>termine</strong> com o valor especificado
+                        Nesse caso: seleciona o elemento que possui a classe que tem em seu valor no final "-box"
+                    </td>
+                </tr>
+                <tr>
+                    <td>[attr*=value]</td>
+                    <td>li[class*="box"]</td>
+                    <td>
+                        Seleciona o elemento que possui um atributo classe e que a classe <strong>contem em qualquer lugar da string</strong> o valor especificado
+                        Nesse caso: seleciona o elemento que possui uma classe que contem a palavra "box"
+                    </td>
+                </tr>
+                <tr>
+                    <th >
+                        Observação
+                    </th>
+                    <td colspan="2">
+                        Os seletores acima são case sensitive, para desativar o case sensitive deve-se adicionar o <strong>i</strong> na frente
+                        do valor que se deseja selecionar. Exemplo: <strong> li[class^="a" i] </strong> (seleciona os li que possuem a letra "a" ou "A")
+                    </td>
+                </tr>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    
+
+    
+
+    <!--Seletores de pseudo classes-->
+    <div class="tiposSeletores">
+        <h2>Seletores pseudo-classes</h2>
+        <p class="pseudoClasses">São aqueles nos quais selecionam os obejtos de acordo com seu estado, essa tag p, muda de cor ao passar com o mouse por cima.</p>
+        <p class="pseudoClassesPrimeiraLinha">
+            Existem ainda seletores mais específicos que selecionam partes especificas de um elemento. São chamados de <Strong>pseudo elementos</Strong>
+            pois agem como se existisse uma tag html, mas não existe, como a primeira linha desse texto por exemplo.
+            Neste caso, o seletor ::first-line, seleciona apenas a primeira linha do elemento do paragrafo!
+        </p>
+        <p>Seletores pseudo-classes são importantes para a manutenção do código! Existem muitos outros tipos que devem ser consultados, mas listaremos
+            abaixo alguns exemplos:
+        </p>
+        <table>
+            <caption>Lista basica de pseudo-classes</caption>
+            <thead>
+                <tr>
+                    <th>Pseudo-Classe</th>
+                    <th>Descricão</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>:first-child</td>
+                    <td>Seleciona o primeiro elemento que aparece em uma tag html</td>
+                </tr>
+                <tr>
+                    <td>:hover</td>
+                    <td>Seleciona o elemento quando o mouse está posicionado sobre ele</td>
+                </tr>
+                <tr>
+                    <td>:focus</td>
+                    <td>Quando o usuário está interagindo efetivamente com o elemento html. Ex: click do usuario</td>
+                </tr>
+                <tr>
+                    <td>::before</td>
+                    <td>
+                        É um pseudo elemento que permite adicionar conteúdo ao html utilizando css, nesse caso, é adicionado antes
+                        do elemento html
+                    </td>
+                </tr>
+                <tr>
+                    <td>::after</td>
+                    <td>
+                        É um pseudo elemento que permite adicionar conteúdo ao html utilizando css, nesse caso, é adicionado depois
+                        do elemento html
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="afterBefore">
+            Isto é um exemplo de utilização de after e before
+        </p>
+
+
+        <p>
+           Também é possivel juntar pseudo-classes com pseudo elementos: 
+        </p>
+        <table>
+            <caption>Exemplo de utilização de pseudo-classes com pseudo-elementos</caption>
+            <thead>
+                <tr>
+                    <th>Seletor</th>
+                    <th>Descrição</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>article p:first-child::first-line</td>
+                    <td>Seleciona a primeira linha do primeiro elemento p que está na tag html article</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="tiposSeletores">
+        <div class="combinadores">
+            <h2>Combinadores</h2>
+            <p>
+                São aquele seletores que combinam outros seletores para selecionar um elemento específico.
+                Para estilizar este paragrafo foi utilizado ".combinadores > p" que seleciona todos os elementos 
+                p dentro da div com a classe combinadores
+            </p>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Combinador</th>
+                    <th>Exemplo</th>
+                    <th>Descrição</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Combinador descendente</td>
+                    <td>body article p</td>
+                    <td>
+                        Seleciona todos os elemenos que são descendentes de uma tag, mesmo que não seja descendentes
+                        diretos.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Combinador filho</td>
+                    <td>article > p </td>
+                    <td>
+                        Seleciona apenas os descendentes diretos da tag, se houver outro paragrafo dentro de uma div 
+                        nessa mesma tag article, não será selecionada.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Combinador próximo irmão</td>
+                    <td>h1 + p </td>
+                    <td>
+                        Seleciona a próxima tag que está no mesmo nível. No exemplo dado: o seletor aplicaria
+                        o css para a próxima tag de paragrafo que aparece após a tag h1. 
+                    </td>
+                </tr>
+                <tr>
+                    <td>Combinador subsequentes irmãos</td>
+                    <td>h1 ~ p </td>
+                    <td>
+                        Seleciona todas as proximas tags p's. No exemplo dado: o seletor aplicaria
+                        o css para todas tags de paragrafos que aparece após a tag h1. 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>
+            Combinadores podem ser aninhados para uma melhor leitura
+        </p>
+        <table>
+            <caption>Maneiras diferentes de escrever a mesma coisa</caption>
+            <thead>
+                <tr>
+                    <th>Aninhado</th>
+                    <th>Não aninhado</th>
+                </tr> 
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <pre>
+p {
+    ~ img {
+    }
+}
+                        </pre>
+                    </td>
+                    <td>
+                        p ~ img {
+                        }
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <pre>
+p {
+    & img {
+    }
+}
+                        </pre>
+                    </td>
+                    <td>
+                        p  img {
+                        }
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="tiposSeletores">
+        <h2>Seletores universais</h2>
+        <div class="seletorUniversal">
+            <p>Seleciona todos os elementos</p>
+            <p>
+                Neste caso, o seletor universal seleciona todos os elementos 
+                que estão dentro da tag div com a classe seletorUniversal.
+            </p>
+            <ul>
+                <li>Seleciona esse tambem, que é uma lista</li>
+            </ul>
+            <p>
+                Seletores universais podem ser usados para o que se costuma chamar de <i>Reset CSS</i>, que 
+                remove os estilos pré-estilizados do navegador.
+            </p>
+        </div>
+    </div>
+
+    <a href="/index.html">Voltar para a tela inicial</a>
+</body>
+</html>

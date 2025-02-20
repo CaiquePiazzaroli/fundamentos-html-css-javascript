@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
+ * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #053B50;
+ }
+
+body {
+    display: flex;
+    height: 100vh;
+    font-size: 10px;
+    background-image: url(assets/1.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+} 
+
+ .principal {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #ffffff8e;
+    border-radius: 45px;
+    padding: 5em;
+    width: 50%;
+    height: 70%;
+ }
+
+ .tela {
+    text-align: center;
+    font-size: 15em;
+    font-weight: 700;
+ }
+
+ .seleciona__tempo {
+    text-align: center;
+    margin: 1rem 0 1rem 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+ }
+
+ .seleciona__tempo > p {
+    font-size: 1rem;
+ }
+
+ .config{
+    display: flex;
+    gap: 1em;
+ }
+
+
+ .config > input, .config > button {
+    text-align: center;
+    box-sizing: border-box;
+ }
+
+ .config > button {
+    width: 7rem;
+    border: none;
+    border-radius: 45px;
+    background-color: #053B50;
+    font-weight: 700;
+    font-size: 3em;
+    color: #EEEEEE; 
+ }
+
+ .campoAlteraTempo {
+    border: solid 2px;
+    border-radius: 45px;
+    background-color: transparent; 
+    font-size: 5em;
+    width: 5em;
+ }
+
+ .inicio__fim {
+    display: flex;
+    gap: 0.5em;
+    justify-content: center;
+    gap: 4em;
+ }
+
+ .inicio__fim > button {
+    background-color: transparent;
+    border: solid 2px #053B50;
+    font-size: 7em;
+    width: 5em;
+    font-weight: 700;
+    padding: 0.1em, 0.3em;
+    border-radius: 100px;
+}
+
+.inicio__fim > button:hover {
+   background-color: #053B50;
+   color: #EEEEEE;
+   padding: 0.1em, 0.3em;
+}
+
+
+.altera__background {
+   text-align: center;
+}
+
+.altera__background__botao {
+   background-color: transparent;
+   border: solid 2px #053B50;
+   font-size: 3em;
+   width: 12rem;
+   font-weight: 700;
+   text-align: center;
+   border-radius: 100px;
+}
+
+.altera__background__botao:active {
+   background-color: #08506d;
+   color: #EEEEEE;
+   padding: 0.1em, 0.3em;
+}
+
+.botao__ativo {
+    border: none;
+    font-size: 10em;
+    font-weight: 700;
+    padding: 0.3em;
+    border-radius: 100px;
+}
+
+@media screen and (max-width: 1144px) {
+   body{  
+      font-size: 6px;
+   } 
+
+   .principal {
+      width: 80%;
+      height: 50%;
+   }
+}

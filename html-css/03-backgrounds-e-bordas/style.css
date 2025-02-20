@@ -1,0 +1,35 @@
+body {
+    text-align: center;
+}
+
+#div1 {
+    background-color: #567895;
+    display: inline-block;
+    padding: 10px;
+}
+
+#h31 {
+    background-color: black;
+    color: white;
+}
+
+#span1 {
+    background-color:rgb(255 255 255 / 50%);;
+}
+
+
+#div2um {
+    border: #567895 solid;
+    height: 50px;
+    width: 70px;
+    display: inline-block;
+    background-image: url(img/balloons.jpg);
+}
+
+#div2dois {
+    border: #567895 solid;
+    height: 50px;
+    width: 70px;
+    display: inline-block;
+    background-image: url(img/star.png);
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video e audio</title>
+</head>
+<body>
+    <h1>Videos e audio</h1>
+    <p>Video de um coelho</p>
+    <video controls width="400" height="400" loop muted preload="auto" poster="videos/poster.png"> <!--A tag video insere um vídeo em uma página HTML, o atributo controls permite que o usuário controle 
+    o video com o play ou pause etc. Os atributos são auto explicativos, tambem existe o atributo autoplay que reproduz o video automaticamente-->
+        <source src="videos/rabbit320.mp4" type="video/mp4" />
+        <source src="videos/rabbit320.webm" type="video/webm" /> <!--A tag source inclui dois tipos direfentes de arquivo de video.
+        o navegador reproduzirá aquele que primeiro ser compativel com ele. O atributo Type indica ao navegador o tipo de formato de video que a tag
+        source se refere, permitindo que ele execute aquele formato que é compativel de maneira direta, sem necessidade de tentar reproduzir um por um
+        até encontrar um que funcione.-->
+        <p>
+            O seu navegador não suporta este video!<!--Esta informação quando o navegador não suportar a reprodução de vídeo -->
+        </p>
+    </video><br><br>
+    <p>Video com legenda</p>
+    <video controls>
+        <source src="videos/sintel-short.mp4" type="video/mp4"/>
+        <source src="videos/sintel-short.webm" type="video/webm"/> 
+        <track kind="subtitles" src="subtitles/vtt/sintel-pt.vtt" srclang="pt" label="Portuguese" />
+        <p>
+            seu video não pode ser reproduzido
+        </p>
+    </video>
+
+
+
+
+    <p>Audio de rock n roll</p>
+    <audio controls>
+        <source src="audio/viper.mp3" type="audio/mp3" />
+        <source src="audio/viper.ogg" type="audio/ogg" />
+        <p>
+          Seu navegador nao suporta este Audio
+        </p>
+      </audio>
+      
+
+    <a href="/index.html">Voltar para o início</a>
+</body>
+</html>

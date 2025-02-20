@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento keydown</title>
+</head>
+<body>
+    <input type="text">
+    <p></p>
+</body>
+
+<script>
+    var p = document.querySelector("p");
+    var inp = document.querySelector("input");
+
+    inp.addEventListener("keydown", () => {
+        p.textContent = inp.value;
+    })
+</script>
+</html>

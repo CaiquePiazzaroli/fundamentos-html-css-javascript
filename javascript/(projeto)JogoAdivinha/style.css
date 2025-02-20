@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Handjet', cursive;
+    background-image: url("assets/8bits.jpg");
+    background-size: cover;
+    box-sizing: border-box;
+    height:100%;
+    /* border: 5px solid rgb(255, 0, 234); */
+    display: flex;
+  }
+
+body {
+    background-color: rgba(0, 0, 0, 0.473);
+    color: aliceblue;
+    padding: 2rem;
+    width: 50%;
+    margin: auto;
+    font-size: 32px;
+  }
+
+.lastResult {
+    color: white;
+    padding: 3px;
+  }
+
+body h1 {
+    text-align: center;
+    margin: 2rem;
+}
+
+.form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.guessField, .guessSubmit {
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.guesses {
+    font-weight: 600;
+    text-align: center;
+}
+
+.resultParas {
+    margin-top: 1rem;
+    text-align: center;
+    gap: 1rem
+}
+
+.nito {
+    display: none;
+    margin: auto;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    html{
+        background-size:cover;
+    }
+    body {
+        font-size: 16px;
+        padding: 0.5rem;
+        margin: 0;
+        width: 100%;
+    }
+
+    .nito {
+        display: none;
+        margin: auto;
+    }
+}
+
+

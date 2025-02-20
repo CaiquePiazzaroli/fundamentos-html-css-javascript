@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Prevent default example</title>
+    <style></style>
+  </head>
+  <body>
+    <div id="container">
+        <button>Click me!</button>
+      </div>
+      <pre id="output"></pre>
+    <script>
+        const output = document.querySelector("#output");
+        function handleClick(e) {
+        output.textContent += `You clicked on a ${e.currentTarget.tagName} element\n`;
+        }
+
+        const container = document.querySelector("#container");
+        const button = document.querySelector("button");
+
+        //os 3 eventos sao executados 
+        document.body.addEventListener("click", handleClick);
+        container.addEventListener("click", handleClick);
+        button.addEventListener("click", handleClick);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Prevent default example</title>
+    
+  </head>
+  <body>
+    <div id="container">
+        <button>Click me!</button>
+      </div>
+      <pre id="output"></pre>
+
+      <script>
+        const output = document.querySelector("#output");
+        function handleClick(e) {
+        output.textContent += `You clicked on a ${e.currentTarget.tagName} element\n`;
+        }
+
+        const container = document.querySelector("#container");
+        const button = document.querySelector("button");
+
+
+        // capture: true dispara o evento na sequencia em que aparecem, os elementos sem capture, seraão execultados por ultimo
+        // na ordem em que aparecem
+        document.body.addEventListener("click", handleClick, { capture: true });
+        container.addEventListener("click", handleClick);
+        button.addEventListener("click", handleClick, { capture: true });
+      </script>
+  </body>
+</html>

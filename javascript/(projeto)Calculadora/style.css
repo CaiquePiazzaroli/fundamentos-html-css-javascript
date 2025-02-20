@@ -1,0 +1,84 @@
+@import url('https://fonts.cdnfonts.com/css/calculator');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: azure;
+    font-size: 2rem;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Calculator', sans-serif;
+    font-size: 16px;
+}
+
+.main {
+    margin: auto;
+    max-width:50%;
+    text-align: center;
+    background-color: black;
+    padding: 1em;
+}
+
+
+.resultado, .painel {
+    border: 1px solid rgb(119, 119, 119);
+    background-color: black;
+    padding: 5px;
+    color: red;
+    
+}
+
+.painel{
+    overflow: hidden;
+
+    /*desativando o painel*/
+    color: black;
+}
+
+.main div {
+    margin-bottom: 1em;
+    width: 100%;
+    font-family: 'Calculator', sans-serif;
+    font-size: 32px;
+}
+
+.main input {
+    margin-bottom: 1em;
+    width: 98.8%;
+    font-family: 'Calculator', sans-serif;
+    font-size: 32px;
+    text-align: center;
+}
+
+.numeros {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.numeros button {
+    margin: 2px;
+    font-size: 1em;
+}
+
+
+.botoes {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.botoes button {
+    margin: 2px;
+    font-size: 1em;
+}
+
+.clear, .igual {
+    background-color: beige;
+}
+

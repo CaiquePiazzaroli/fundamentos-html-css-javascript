@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The box model</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h3>Inline, block, inline-flex e flex</h3>
+    <p>Um elemento html pode ter um display interno e um display externo. Vamos falar sobre o display externo</p>
+    <p id="p1">Este paragrafo é um paragrafo com display em bloco</p>
+    <p id="p2">Este paragrafo é um paragrafo com display em linha</p>
+    <p id="p3">A tag <span id="span1">span</span> se comporta como inline, mas nesse caso, foi setado como block</p>
+    <p id="p4">Paragrafo inline</p><p id="p4">Paragrafo inline</p><p id="p4">Paragrafo inline</p><p id="p4">Paragrafo inline</p>
+    <p id="p4">Paragrafo inline</p><p id="p4">Paragrafo inline</p><p id="p4">Paragrafo inline</p><p id="p4">Paragrafo inline</p>
+    <p id="p4">Paragrafo inline</p><p id="p4">Paragrafo inline</p><p id="p4">Paragrafo inline</p><p id="p4">Paragrafo inline</p>
+    <p id="p4">Paragrafo inline</p><p id="p4">Paragrafo inline</p><p id="p4">Paragrafo inline</p><p id="p4">Paragrafo inline</p>
+    <p id="p4">Paragrafo inline</p><p id="p4">Paragrafo inline</p><p id="p4">Paragrafo inline</p><p id="p4">Paragrafo inline</p>
+    <ul id="ul1">
+        <li id="li1">A parte externa da lista se comporta como bloco. Mas a propriedade flex é aplicada aos filhos da lista, mesmo que o flexbox seja aplicado a tag ul</li>
+        <li id="li1">item 2</li>
+        <li id="li1">Item 3</li>
+    </ul>
+
+    <ul id="ul2">
+        <li id="li1">Usando o valor inline-flex tanto a parte interna da lista, quanto a externa se comporta como inline</li>
+        <li id="li1">item 2</li>
+        <li id="li1">Item 3</li>
+    </ul>
+    <hr> 
+    <h3>Box model padrão e box model border box</h3>
+    <p>Com relação ao tamanho do box model, podemos definir dois tipos: o padrão (que não inclui o padding e border em seu tamanho) e 
+        o box model (em que seu tamanho ja inclui o padding e a margin), vamos aos exemplos
+    </p>
+    <p id="p5">
+        Isso é um paragrafo que possui 440px de tamanho + 5px de padding e mais 7px de margin.
+        Seu tamanho total é de 440+5+7 = 452px (é preciso somar os valores)
+    </p>
+    <p id="p6">
+        Por outro lado, este parágrafo foi definido com o tamanho 440px, e por conter a propriedade box-sizing:border box, passa a
+        incluir dentro desses 440px os tamanhos do padding e da border. Resumindo, seu tamanho  real é 440, não sendo necessário somar
+        qualquer valor da borda ou padding.
+    </p>
+    <hr> 
+    <p id="p7">
+        Tentando aplicar padding, margin, width e hight ao <span id="span2">span</span> dentro de um parágrafo, lembrando que a tag span tem o display do tipo inline!
+    </p>
+    <p id="p8">
+        Tentando aplicar padding, margin, width e hight ao <span id="span3">span</span> dentro de um parágrafo, alterando o diplay de inline para inline block, que é um meio termo entre inline e block (padding, margin, width e high são respeidados)
+    </p>
+</body>
+</html>

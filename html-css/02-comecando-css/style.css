@@ -1,0 +1,53 @@
+/* Seletor por tag */
+h1 {
+    color: red;
+}
+
+/* multiplo seletor por tag */
+p, li {
+    color: green;
+}
+
+li {
+    list-style-type: "\1F44D";
+}
+
+/*Seletor por classe*/
+.special {
+    color: orange;
+    font-weight: bold;
+}
+
+/*Seleciona a tag <em> que é descendente de li*/
+li em {
+    color: rebeccapurple;
+}
+
+/*Aplica o css para o proximo <p> após <h1> e que esteja no mesmo nivel hierarquico*/
+h1 + p {
+    font-size: 200%;
+}
+
+/*Estilizando um item html por estado,
+link (antes de clicar), 
+visited (depois que clica), 
+hover (quando a seta do mouse esta em cima)*/
+a:link {
+    color: pink;
+    font-weight: bold;
+}
+
+a:visited {
+    color: rgb(128, 0, 0);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/*Seleciona a tag html que está dentro do body, logo apos ao h1, dentro de uma tag p possui a classe .special */
+body h1 + p .special {
+    color: yellow;
+    background-color: black;
+    padding: 5px;
+}

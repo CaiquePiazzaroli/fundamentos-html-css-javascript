@@ -1,0 +1,225 @@
+<!DOCTYPE html><!-- Diz ao navagador que este documento é do tipo html-->
+<html lang="pt-br"> <!--Elemento html que envelopa todo os elementos que existem no documento html-->
+    <head> <!--Inclui informções como arquivo CSS arquivo script etc-->
+        <meta charset="UTF-8"> <!--Define o tipo de codificação de caracteres -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Atributos name: tipo de informação que a tag contém; Content: Especifica o conteúdo meta-->
+        <meta name="author" content="Caique mendes"/>
+        <meta name="description" content="A documentação MDN tem por objetivo fornecer aos iniciantes tudo que elementos
+                precisam saber para construir websites e aplicações." />
+        <link rel="stylesheet" href="style.css" /><!--rel: indica o tipo de arquivo e href: o diretório do arquivo-->
+        <!--SRC: source, indica onde esta o arquivo na pasta e defer, diz para o html que o script deve apenas ser executado apos o carregamento da pagina-->
+        <title>Página principal</title><!--Define o nome que aparece na parte de cima da janela -->
+    </head>
+
+    <body><!--Contém todo o conteúdo da página -->
+
+        <header><!--Cabeçalho da página-->
+            <img src="/img/mozilla-dinosaur-head_120w.png">
+            <h1 class="tituloPrincipal">Aprendendo html e css com a documentação mdn</h1>
+            <nav class="navBarHTML"><!--Barra de navegação da pagina, menu da pagina-->
+                <a href="/templates/receita.html">Receitas Completas</a>
+                <a href="/templates/carta.html">*Carta*</a>
+                <a href="/birds/assets/birds.html">*Página Birds*</a>
+                <a href="/dino/dino.html">Dino</a>
+                <a href="/videoAudio/videoAudio.html">Videos e Audio</a>
+                <a href="/criandoSVG/svg.html">SVG</a>
+                <a href="/imagensResponsivas/imagensResponsivas.html">Imagens responsivas</a>
+                <a href="/mozilaSplashPage/splashPage.html">*Mozzila splash page*</a>
+                <a href="/tabelas/tabelas.html">Tabelas</a>
+                <a href="/planetas/planetas.html">*Planetas*</a>
+                <a href="mailto:caique405@gmail.com"> Consultoria</a> <!--mailto: abre o aplicativo de email-->
+            </nav>
+            <nav class="navBarCSS">
+                <a href="comecandoCss/comecandoCss.html">Começando em css</a>
+                <a href="estruturaCSS/estruturaCSS.html">Estruturando css</a>
+                <a href="/estilizandoUmaPagina/index.html">*Estruturando uma biografia*</a>
+                <a href="/SeletoresCSS/index.html">Tipos de seletores em css</a>
+                <a href="/ConceitosImportantesCss/">Conceitos importantes no css</a>
+                <a href="theBoxModel/index.html">O modelo de caixa (the box model)</a>
+                <a href="backgroundsAndBorder/index.html">Backgrounds e bordas</a>
+            </nav>
+        </header>
+
+        
+
+        <main><!--Tag onde se concentra o conteúdo principal da pagina-->
+            <article><!--Agupa conteúdos parecidos-->
+                <div class="imagemApresentacao">
+                    <!--Tags divs e spans não possuem semanticas, são apenas utilizados para organização. Sempre acompanhadas por uma classe ou id-->
+                    <a href="https://developer.mozilla.org/en-US/" title="Melhor lugar para aprender front end!">
+                        <!--Hiper link, cria conxoes com outras páginas!-->
+                        <!--O title permite vizualizar uma informação adicional sobre o link-->
+                        <img src="img/mdn_logo.svg" alt="MDN Web Docs" /> <!--Nomear nomes de arquivos de acordo com o que ele representa
+                        isso ajuda os mecanismos de pesquisa!-->
+                    </a>
+                </div>
+                <div class="sessaoPoemas">
+                    <p>Seja bem vindo!
+                        ようこそ!</p><!--O navegador nao diferencia espaçamento entre as tags!-->
+
+                    <!--História utilizando h's e p's-->
+                    <h1>Cozinhando com prazer!</h1><!--Semantica de conteúdo mais importante da página-->
+                    <h2>Cozinhar é viver..</h2>
+                    <p>Cozinhar é viver, portanto, este projeto se destina-se a pessoas e não pessoas (humanoides) que
+                        desejam aprender
+                        a cozinhar e, portanto, precisam de uma ajudinha ou um toque de inspiração. Se Cozinhar é viver e,
+                        viver é uma
+                        arte, cozinhar é arte! A arte de proporcionar prazeres!</p>
+
+                    <p>By: Caique Mendes</p>
+                </div>
+            </article>
+            <br><!--Pular linha-->
+            <hr><!--Escrever uma linha-->
+            <br>
+            <section><!--Agrupa partes do html, exemplo: minimapa-->
+                <!-- Criando listas-->
+                <div class="sessaoAprendizados">
+                    <p>Listas que não podem faltar na cozinha!</p>
+                    <ul>
+                        <p>Frutas mais utlizadas na cozinha!</p>
+                        <li>Banana</li>
+                        <li>Maçã</li>
+                        <li>Limão</li>
+                    </ul>
+                    <ol id="listaDeAtividades">
+                        <p>Sequência básica da cozinha!</p>
+                        <li>Comprar ingredientes</li>
+                        <li>Misturar tudo</li>
+                        <li>Assar</li>
+                        <li>Comer</li>
+                    </ol>
+                    <!--Listas descritivas-->
+                    <p>Listas sobre alimentos mais importantes a se conhecer:</p>
+                    <dl><!--Description list-->
+                        <dt>Trigo</dt><!--Description term: o termo -->
+                        <dd>
+                            O trigo é a gramínea cultivada em todo o mundo.
+                            Mundialmente, é a segunda maior cultura de cereais, sendo a primeira o milho e a terceira o
+                            arroz. O grão de
+                            trigo
+                            é um alimento básico usado para fazer farinha e, com esta, o pão, na alimentação dos animais
+                            domésticos e
+                            como ingrediente na fabricação de cerveja
+                        </dd><!--Description definition: é uma descrição sobre o termo-->
+                        <dt>Batata</dt>
+                        <dd>
+                            A Solanum tuberosum, comummente conhecida como batata,
+                            é uma planta perene da família das solanáceas e pertencente ao tipo fisionómico dos terófitos.
+                        </dd>
+                        <dd>
+                            A batata é muito boa mnhan mnham.
+                        </dd>
+                    </dl>
+                    <p>
+                        Falando um pouco sobre algumas abreviações na cozinha temos:
+                        <abbr>x</abbr> (xícara),
+                        <abbr title="chícara de café">xcf</abbr>,
+                        <abbr>CS</abbr> (colher de sopa)
+                    </p>
+
+                    <p>
+                        O número de opções na na cozinha é de 2<sup>n</sup> onde n representa o numero de ingredientes!
+                        <!--sup: escreve em cima-->
+                        Além disso, não podemos esquecer da água, que não é um ingrediente mas é extrema mente importante:
+                        H<sub>2</sub>O <!--Sub: Escreve em baixo-->
+                    </p>
+                </div>
+            </section>
+            <br>
+            <hr>
+            <br>
+            <article>
+                <!--Citação-->
+                <div class="sessaoAprendizados">
+                    <p>
+                        De acordo com o
+                        <a href="/en-US/docs/Web/HTML/Element/blockquote">
+                            <cite>Chef. Larran Rousaeru</cite>
+                            <!-- Usando a tag cite para dizer ao navegador que isto é uma citação-->
+                        </a>:
+                    </p>
+                    <!--Bloco de citação-->
+                    <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+                        <!--Cite: documento de origem da citação-->
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta illum odio blanditiis ab
+                            explicabo, animi
+                            omnis! Minima ullam officiis sequi obcaecati, magni ipsam pariatur incidunt quae molestias esse
+                            ipsa.
+                            Maxime? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur fugiat
+                            voluptatibus ab eveniet
+                            expedita reiciendis molestias vero optio. Aspernatur esse explicabo error id incidunt dolor
+                            itaque illum.
+                            In, nisi assumenda!
+                        </p>
+                        <p>
+                            Rousearu diz:
+                            <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel eaque quasi, ipsum deserunt
+                                officia eos
+                                saepe itaque repudiandae corporis minus, commodi libero quis ipsa earum adipisci neque
+                                dolorum enim
+                                obcaecati?
+                            </q>
+                        </p>
+                    </blockquote>
+                </div>
+            </article>
+            <br>
+            <hr>
+            <br>
+            <section>
+                <div class="sessaoProgramacao">
+                    <p>
+                        Atenção, programadores na cozinha:
+                    <pre><!--A tag pre, respeita os espaços em branco-->
+                            No código do 
+                            programa 
+                            está escrito:
+                            <code><!--A tag code é destinada para escrever código-->
+                                let trigo = "trigoRossini"
+                            </code>
+                            Note que a variável <var>trigo</var> é do tipo trigoRossini.<!--tag var é destinada para variaveis-->
+                            Mas no segundo bloco de código, 
+                            temos:
+                            <code>
+                                function assarPao(trigo){
+                                    return trigo;
+                                }
+                            </code>
+                            Então, por fim temos a saída no console (<kbd>ctrl+f5</kbd>): <!--KeyBOARD: utilizado para representar teclas do teclado-->
+                            <code>
+                                <samp>$ trigoRossini</samp><!--Representa saida no console-->
+                            </code>
+                            Este código foi atualizado em: <time datetime="2024-04-12">12/04/2024</time> <!--time:  Atribui a semantica de data sem abiguidades-->
+                        </pre>
+                    </p>
+                </div>
+            </section>
+            <br>
+            <hr>
+            <br>
+            <section>
+                <div class="sessaoAprendizados">
+                    <p>Video explicando como fazer feijão na cozinha!</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/pk3Pu7kYAi0?si=YT9YJPJdPYV8EYx2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> <!--Iframe para inserir um vídeo do youtube na página-->
+                    <p>Localização para aulas presenciais com a nossa equipe:</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10186.488607423194!2d-46.35421560700544!3d-23.042767061146716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1713807346987!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><!--Utilizado o iframe para incorporar uma mapa em minha página-->
+                    <p>Iframe de uma página que bloqueia o acesso: </p>
+                    <iframe src="https://developer.mozilla.org/en-US/docs/Glossary" width="400" height="300" allowfullscreen sandbox><!--Sandbox, atributo que restringe o iframe a executar apenas o necessário para o seu funcionamento na minha página. O atributo pode ser usado sem nenhum valor ou com outros valores liberam as permissões de acesso--></iframe>
+                </div>
+            </section>
+        </main>
+        
+            <br>
+            <hr>
+            <br>
+
+        <footer><!-- Rodapé da página -->
+            <address>Todos os direitos reservados ©</address>
+            <address>Caique mendes, São Paulo, São Paulo, SP, 119999999</address> <!--Tag para contato com o autor-->
+        </footer>
+    </body>
+</html>

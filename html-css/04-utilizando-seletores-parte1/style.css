@@ -1,0 +1,129 @@
+/*Importando um css com um rule (regra) - é preciso estar no início do css*/
+@import "/estruturaCSS/style2.css";
+
+
+/*Seletor de tags*/
+h1 {
+    background-color: aqua;
+}
+
+/*Seletor de estados*/
+a:link {
+    background-color: brown;
+}
+
+/*Seletor de classe*/
+.p {
+    background-color: rgba(0, 0, 255, 0.394);
+}
+
+/*Seletor de ids*/
+#p {
+    background-color: rgb(111, 230, 214);
+}
+
+/*Seletor de todos os objetos html*/
+* {
+    font-size: 45px;
+    margin: 70px;
+}
+
+
+/*Combinando seletores*/
+/*Seleciona todos os elementos p dentro do html que possui a classe box*/
+.box p {
+    border: solid red;
+}
+
+/*Seleciona apenas o primeiro elemento p dentro da tag que possui a classe box*/
+.box p:first-child {
+    background-color: aqua;
+}
+
+/*Aplica o css para os elemento h2, h1 e elementos com classe .intro*/
+h2,h1,.intro {
+    border: blue dotted 5px;
+}
+
+/*Aplicando css para a mesma tag <pre> de maneiras diferentes com seletores diferentes*/
+
+pre{
+    color: red;
+    background-image: url(/birds/assets/favorite-1.jpg);
+    font-size: 20px;
+}
+
+
+pre{
+    color: rgb(255, 255, 255);
+    background-image: url(/birds/assets/favorite-2_th.jpg);
+    font-size: 35px;
+}
+
+.pre {
+    color: rgb(46, 252, 0);
+    background-image: url(/birds/assets/favorite-3_th.jpg);
+    font-size: 40px;
+    /*Esse css, por ser um seletor de classe, será priorizado*/
+}
+
+
+/*Função calc calcula a porcentagem em relação ao ao bloco em que esta contido, neste caso, o tamanho*/
+.div1{
+    border: solid 5px orange;
+    padding: 0;
+}
+
+.div2 {
+    margin: 0;
+    background-color: blue;
+    width: calc(75%);  
+}
+
+
+/*Transform: rotate() - Rotaciona o objeto*/
+.caixa {
+    height: 200px;
+    width: 200px;
+    background-color: black;
+    border: dotted yellow 5px;
+    background-image: url(/birds/assets/favorite-3.jpg);
+    transform: rotate(0.8turn);
+}
+
+/*São atributos que podem receber mais de um valor ao mesmo tempo*/
+.shorthands {
+    background-color: rgb(238, 152, 152);
+    border: 5px rgb(136, 136, 246) double;
+    border-radius: 10px;
+    padding:80px 60px 20px 5px; 
+}
+
+
+/*utilizando media queries - define um css novo para cada tamanho de tela*/
+
+.media{
+    width: 400px;
+    height: 200px;
+    color: red;
+    background-color: rgb(141, 237, 237);
+    font-size: 24px;
+}
+
+@media (max-width: 800px) {
+    .media{
+        width: 400px;
+        height: 400px;
+        color: rgb(0, 255, 0);
+        background-color: rgb(25, 56, 168);
+    }
+  }
+
+@media (max-width: 400px) {
+    .media{
+        width: 400px;
+        height: 400px;
+        color: rgb(217, 255, 0);
+        background-color: rgb(168, 25, 94);
+    }
+  }

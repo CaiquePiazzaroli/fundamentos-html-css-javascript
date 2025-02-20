@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Tabela template</title>
+    <link href="tabela.css" rel="stylesheet" type="text/css">
+    <style>
+        tbody {
+            font-size: 95%;
+            font-style: italic;
+        }
+
+        tfoot {
+            font-weight: bold;
+        }
+    </style>
+  </head>
+  <body>
+    <!--Primeira tabela-->
+    <table>
+        <h1>Tabela template</h1>
+        <p>Uma tabela normal sem cabeçalho</p>
+        <tr>
+            <td>Oi, primeira celula.</td>
+            <td>Oi, segunda celula</td>
+            <td>Oi, terceira celula</td>
+            <td>oi, Quarta celula</td>
+        </tr>
+        <tr>
+            <td>Oi, primeira celula da segunda linha.</td>
+            <td>Oi, segunda celula da segunda linha</td>
+            <td>Oi, terceira celula da segunda linha</td>
+            <td>oi, Quarta celula da segunda linha</td>
+        </tr>
+    </table>
+    
+    <!--Segunda tabela-->
+    <table>
+        <h1>Dogs Table</h1>
+        <p>Uma tabela com cabeçalho</p>
+        <tr> <!-- Inicia uma linha -->
+            <td>&nbsp;</td> <!-- Cria uma célula comum -->
+            <th scope="col">Knocky</th> <!-- Cria um cabeçalho -->
+            <th scope="col">Flor</th>
+            <th scope="col">Ella</th>
+            <th scope="col">Juan</th>
+          </tr>
+          <tr>
+            <th scope="row">Raça</th> <!-- Cabeçalho -->
+            <td>Jack Russell</td>
+            <td>Poodle</td>
+            <td>Vira-lata</td>
+            <td>Cocker Spaniel</td>
+          </tr>
+          <tr>
+            <th scope="row">Idade</th> <!-- Cabeçalho -->
+            <td>16</td>
+            <td>9</td>
+            <td>10</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <th scope="row">Proprietário</th> <!-- Cabeçalho -->
+            <td>Sogra</td>
+            <td>Eu</td>
+            <td>Eu</td>
+            <td>Cunhada</td>
+          </tr>
+          <tr>
+            <th scope="row">Hábitos Alimentares</th> <!-- Cabeçalho -->
+            <td>Come as sobras de todos</td>
+            <td>Rói a comida</td>
+            <td>Come bem</td>
+            <td>Vai comer até explodir</td>
+          </tr>
+    </table>
+          
+    <!--Terceira tabela-->
+    <table>
+        <h1>Tabela de Animais</h1>
+        <tr>
+          <th colspan="2">Animais</th> <!-- Cabeçalho abrangendo duas colunas -->
+        </tr>
+        <tr>
+          <th colspan="2">Hipopótamo</th> <!-- Cabeçalho abrangendo duas colunas -->
+        </tr>
+        <tr>
+          <th rowspan="2">Cavalo</th> <!-- Cabeçalho ocupando duas linhas -->
+          <td>Egua</td>
+        </tr>
+        <tr>
+          <td>Garanhão</td>
+        </tr>
+        <tr>
+          <th colspan="2">Crocodilo</th> <!-- Cabeçalho abrangendo duas colunas -->
+        </tr>
+        <tr>
+          <th rowspan="2">Galinha</th> <!-- Cabeçalho ocupando duas linhas -->
+          <td>Galinha</td>
+        </tr>
+        <tr>
+          <td>Galo</td>
+        </tr>
+    </table>
+
+    <!--Quarta tabela-->
+    <!--Tabela estilizada-->
+    <table>
+        <h1>Tabela estilizada com colgroup e col</h1>
+        <p>Utilizando as tags colgrou e col, é possivel estilziar cada coluna como podemos ver abaixo: </p>
+        <colgroup>
+            <col style="background-color: red;"/><!--Determina o estilo da primeira coluna-->
+            <col style="background-color: aqua;"/><!--Determina o estilo da segunda coluna-->
+        </colgroup>
+        <tr>
+            <th>Item 1</th>
+            <th>Item 2</th>
+        </tr>
+        <tr>
+            <td>Valor item 1</td>
+            <td>Valor item 2</td>
+        </tr>
+    </table>
+    
+
+
+    <!--Quinta tabela-->
+
+    <table>
+        <caption>
+            Esta tabela lista os nomes dos meus futuros filhos.
+        </caption><!--Legenda para tabela-->
+        <h1>
+            Criando minha própria tabela
+        </h1>
+        <p>
+            Tabela que lista o nomes de filhos para os casos de ser menino ou menina
+        </p>
+        <tr>
+            <th colspan="2">Nomes possiveis</th>
+            <!--Significa que este cabeçalho ira abranger no maximo 2 colunas, contando com essa-->
+        </tr>
+
+        <!--Dados para nomes de homem-->
+        <tr>
+            <!--Signidica que a linha "homem" irá abranger duas linhas, contando com essa-->
+            <th rowspan="2">Menino</th> 
+            <td>Juninho</td>
+        </tr>
+        <tr>
+            <td>Marcelinho</td> 
+        </tr>
+
+        <!--Dados para nome de mulher-->
+        <tr>
+            <th rowspan="2">Menina</th>
+            <td>Clarice</td>
+        </tr>
+        <tr>
+            <td>Ana</td>
+        </tr>
+    </table>
+
+
+    <!--Sexta tabela, utilizando thead tbody e tfoot-->
+    <table>
+        <h1>Tabelas com tfoot, tboody e thead</h1>
+        <caption>Como escolhi gastar meu dinheiro: tabela construida utilizando tfoot, thead e tbody</caption>
+        <thead>
+            <tr>
+                <th>Compra</th>
+                <th>Local</th>
+                <th>Data</th>
+                <th>Avaliação</th>
+                <th>Custo (€)</th>
+              </tr>
+        </thead>
+        
+        <tfoot>
+            <!--Mesmo estnado no meio da tabela no html, por ser a tag tfoot, 
+            ela sera colocada na parte de baixo da tabela-->
+            <tr >
+                <td colspan="4">SOMA</td> <!--Indica que a célula devera ocupar 4 colunas-->
+                <td>118</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>Corte de cabelo</td>
+                <td>Cabeleireiro</td>
+                <td>12/09</td>
+                <td>Ótima ideia</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>Lasanha</td>
+                <td>Restaurante</td>
+                <td>12/09</td>
+                <td>Arrependimentos</td>
+                <td>18</td>
+              </tr>
+              <tr>
+                <td>Sapatos</td>
+                <td>Loja de calçados</td>
+                <td>13/09</td>
+                <td>Grande arrependimento</td>
+                <td>65</td>
+              </tr>
+              <tr>
+                <td>Pasta de dente</td>
+                <td>Supermercado</td>
+                <td>13/09</td>
+                <td>Bom</td>
+                <td>5</td>
+              </tr>
+        </tbody>
+        
+      </table>
+
+    <!--Tabelas aninhadas, não é recomendável-->
+    <table id="table1">
+        <h1>Tabelas aninhadas</h1>
+        <caption>Exemplo de uma tabela aninhada</caption>
+        <tr>
+          <th>title1</th>
+          <th>title2</th>
+          <th>title3</th>
+        </tr>
+        <tr>
+          <td id="nested">
+
+            <table id="table2"><!--Nova tabela-->
+              <tr>
+                <td>cell1</td>
+                <td>cell2</td>
+                <td>cell3</td>
+              </tr>
+            </table>
+
+          </td>
+          <td>cell2</td>
+          <td>cell3</td>
+        </tr>
+        <tr>
+          <td>cell4</td>
+          <td>cell5</td>
+          <td>cell6</td>
+        </tr>
+    </table>  
+      
+    <!--Criando uma tabela utilzando recursos como scope, headers e id-->
+    <table>
+    <h1>Resumo de Itens Vendidos</h1>
+    
+    <caption>Itens Vendidos Agosto de 2016: esta tabela utilizasse do atributo scope com os valores colgroup, rowgroup
+        col e row para relacionar os cabeçalhos uns com os outros.
+    </caption>
+    <thead>
+        <tr>
+        <td colspan="2" rowspan="2"></td>
+        <th colspan="3" scope="colgroup">Roupas</th><!--Indica que a coluna roupas é pai de outras colunas-->
+        <th colspan="2" scope="colgroup">Acessórios</th>
+        </tr>
+        <tr>
+        <th scope="col">Calças</th><!--Indica que esta é uma coluna filha-->
+        <th scope="col">Saias</th>
+        <th scope="col">Vestidos</th>
+        <th scope="col">Pulseiras</th>
+        <th scope="col">Anéis</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <th rowspan="3" scope="rowgroup">Bélgica</th>
+        <th scope="row">Antuérpia</th>
+        <td>56</td>
+        <td>22</td>
+        <td>43</td>
+        <td>72</td>
+        <td>23</td>
+        </tr>
+        <tr>
+        <th scope="row">Gante</th>
+        <td>46</td>
+        <td>18</td>
+        <td>50</td>
+        <td>61</td>
+        <td>15</td>
+        </tr>
+        <tr>
+        <th scope="row">Bruxelas</th>
+        <td>51</td>
+        <td>27</td>
+        <td>38</td>
+        <td>69</td>
+        <td>28</td>
+        </tr>
+        <tr>
+        <th rowspan="2" scope="rowgroup">Países Baixos</th>
+        <th scope="row">Amsterdã</th>
+        <td>89</td>
+        <td>34</td>
+        <td>69</td>
+        <td>85</td>
+        <td>38</td>
+        </tr>
+        <tr>
+        <th scope="row">Utrecht</th>
+        <td>80</td>
+        <td>12</td>
+        <td>43</td>
+        <td>36</td>
+        <td>19</td>
+        </tr>
+    </tbody>
+    </table>
+
+    <table>
+        <h1>Resumo de Itens Vendidos</h1>
+        
+        <caption>
+            Itens Vendidos Agosto de 2016: esta tabela utiliza-se dos atributos id e headers para indicar quem é o pai e quem é o filho.
+            Atributo headers: inidica qual é a th pai, id: é o id de cada célula, para a célula filha a tag headers recebe o id do pai
+        </caption>
+        <thead>
+          <tr>
+            <td colspan="2" rowspan="2"></td>
+            <th colspan="3" id="roupas">Roupas</th><!--Indica que a coluna roupas é pai de outras colunas-->
+            <th colspan="2" id="acessorios">Acessórios</th>
+          </tr>
+          <tr>
+            <th id="calca" headers="roupas">Calças</th><!--Indica que esta é uma coluna filha-->
+            <th  id="saias" headers="roupas">Saias</th>
+            <th  id="vestidos" headers="roupas">Vestidos</th>
+            <th  id="pulseiras" headers="acessorios">Pulseiras</th>
+            <th id="aneis" headers="acessorios">Anéis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th rowspan="3" id="belgica">Bélgica</th>
+            <th id="antuérpia" headers="belgica">Antuérpia</th>
+            <td>56</td>
+            <td>22</td>
+            <td>43</td>
+            <td>72</td>
+            <td>23</td>
+          </tr>
+          <tr>
+            <th id="gante" headers="belgica">Gante</th>
+            <td>46</td>
+            <td>18</td>
+            <td>50</td>
+            <td>61</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <th id="bruxelas" headers="belgica">Bruxelas</th>
+            <td>51</td>
+            <td>27</td>
+            <td>38</td>
+            <td>69</td>
+            <td>28</td>
+          </tr>
+          <tr>
+            <th rowspan="2" id="paisesBaixos">Países Baixos</th>
+            <th id="amsterda" headers="paisesBaixos">Amsterdã</th>
+            <td>89</td>
+            <td>34</td>
+            <td>69</td>
+            <td>85</td>
+            <td>38</td>
+          </tr>
+          <tr>
+            <th id="utrecht" headers="paisesBaixos">Utrecht</th>
+            <td>80</td>
+            <td>12</td>
+            <td>43</td>
+            <td>36</td>
+            <td>19</td>
+          </tr>
+        </tbody>
+      </table>
+      <a href="/index.html">Voltar ao inicio</a>
+  </body>
+</html>

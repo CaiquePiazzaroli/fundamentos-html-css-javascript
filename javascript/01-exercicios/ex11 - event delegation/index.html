@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event delegation</title>
+</head>
+<style>
+    .tile {
+  height: 100px;
+  width: 100px;
+  float: left;
+}
+</style>
+<body>
+    <p></p>
+    <div id="container">
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+    </div>
+</body>
+<script>
+    function random(number) {
+        return Math.floor(Math.random() * number);
+      }
+
+      function bgChange() {
+        const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+        return rndCol;
+      }
+
+      //o seletor pega toda a div, fazendo que todas as divs filhas também dispare o evento
+      const container = document.querySelector("#container");
+      const p = document.querySelector("p");
+ 
+      container.addEventListener("click", (event) => {
+        //o target serve para executar o evento no elemento clicado
+        event.target.style.backgroundColor = bgChange();
+        p.textContent = event.target.style.backgroundColor;
+        p.style.textAlign = "center";
+      });
+
+</script>
+</html>

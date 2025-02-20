@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Prevent default example</title>
+    <style></style>
+  </head>
+  <body>
+    <div id="container">
+        <button>Click me!</button>
+      </div>
+      <pre id="output"></pre>
+    <script>
+        const output = document.querySelector("#output");
+        function handleClick(e) {
+        output.textContent += `You clicked on a ${e.currentTarget.tagName} element\n`;
+        }
+
+        //evento foi adicionado no evento pai, mas a função é disparada 
+        //quando o elemento button é clicado, ou seja, o elemento  filho
+        const container = document.querySelector("#container");
+        container.addEventListener("click", handleClick);
+    </script>
+  </body>
+</html>

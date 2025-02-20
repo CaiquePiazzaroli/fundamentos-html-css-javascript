@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body>
+    <button class="botao">
+        Mudar cor
+    </button>
+    <p style="display: none;">Teste</p>
+</body>
+<script>
+        const btn = document.querySelector("button");
+
+    function random(number) {
+    return Math.floor(Math.random() * (number + 1));
+    }
+
+    //e  = event = evt
+    //target = alvo que sofreu o evento
+    function bgChange(e) {
+    const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+    e.target.style.backgroundColor = rndCol;
+    //evento
+    console.log(e);
+    //alvo do evento
+    console.log(e.target);
+    //conteudo de texto do alvo do evento
+    console.log(e.target.textContent);
+    }
+
+    btn.addEventListener("click", bgChange);
+</script>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receita</title>
+    <link rel="stylesheet" href="/style/style.css"/>
+    <script src="/script/script.js" defer></script>
+</head>
+<body>
+    <main>
+        <div class="sessaoReceitas">
+            <h1>Pasta de grão de bico</h1>
+            <p>Receita para fazer pasta de grão de bico sem bagunça!! É a junção de tudo que aprendi durante minha vida!</p>
+            <p>Essa receita, também chamada de hummus, era uma comida típica da grécia e oriente médio. Fica muito gosto com comida grelhada e pão.</p>
+
+            <ul>
+                <li>
+                    <p><strong>Instruções</strong></p><!--A tag strong possui semantica, atribui peso ao elemento-->
+                    <ol>
+                        <li>Instrução 1</li>
+                        <li>Instrução 2</li>
+                        <li>Instrução 3</li>
+                    </ol>
+                    <p>Outras anotações...</p>
+                </li>
+                <li>
+                    <p><b>Armazenamento</b></p>
+                    <!--A tag b(bold) nao aplica semântica ao objeto. 
+                    EElementos que nao devem ser usados. HTML: semantica, CSS:stilo-->
+                    <!--Para estilizar algo da maneira correta, utiliza-se a tag span junto ao css,
+                    olhar no css as classe armazenamento e intenso-->
+                    <p>
+                        <span class="armazenamento">Atenção! O produto precisa ser levado ao freezer por<span class="intenso">pelo menos</span>5 horas!</span>
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <aside><!--Tag para barra lateral, sidebar-->
+            <a href="/pdf/receita.pdf" download="receita.pdf"> Baixar pdf </a>
+            <!--atributo download inicia o download do arquivo automaticamente-->
+
+            <a href="/pdf/receita.pdf" target="_blank"> Ver pdf online </a>
+            <!--atributo target: abrir novaba/janela/continuar na mesma pagina etc-->
+
+            <a href="/index.html#listaDeAtividades">Voltar para sequencia básica da cozinha</a> 
+            <!--HREF que aponta para um id no documento index (fragmento documento)-->
+        </aside>
+    </main>
+    <footer>
+        <address>Todos os direitos reservados ©</address>
+        <address>Caique mendes, São Paulo, São Paulo, SP, 119999999</address> <!--Tag para contato com o autor-->    
+    </footer>
+</body>
+</html>

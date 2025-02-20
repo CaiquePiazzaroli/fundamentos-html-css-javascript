@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@500&display=swap');
+
+:root {
+    --cor-titulo: #000000b6;
+    --cor--secundaria: #aaaaaa;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    font-family: 'Urbanist', sans-serif;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.principal {
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 6rem 4rem 2rem 5rem;
+}
+
+.principal__descricao {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 20%;
+}
+
+.redes {
+    text-align: center;
+}
+
+
+.principal__descricao__titulo {
+    font-size: 2.5rem;
+    color: var(--cor-titulo)
+}
+
+.principal__descricao__subtitulo {
+    font-size: 1.5rem;
+    color: var(--cor--secundaria);
+}
+
+.principal__descricao__sobremim {
+    font-size: 1rem;
+    color: var(--cor--secundaria);
+    line-height: 2.5rem;
+}
+
+
+.principal__imagem {
+    width: 76%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: 4%;
+}
+
+
+.principal__imagem__1 {
+    height: 48%;
+    display: flex;
+    gap: 4%;
+}
+
+.principal__imagem__media {
+    object-fit: cover;
+    width: 48%;
+ }
+
+.principal__imagem__2 {
+    height: 48%;
+    display: flex;
+}
+
+.principal__imagem__grande {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+ }
+
+
+ @media only screen and (max-width: 1200px), 
+        screen and (max-height: 712px)   {
+        .container {
+            height: 100%;
+        }
+
+        .principal {
+            flex-direction: column;
+            padding: 3rem 2rem 1rem 3rem;
+            gap:2rem;
+        }
+
+        .principal__descricao {
+            gap: 2rem;
+            width: 100%;
+        }
+
+        .principal__imagem {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            gap:0rem;
+        }
+
+        .principal__imagem__1 {
+            height: 32rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap:0;
+        }
+
+        .principal__imagem__media {
+            object-fit: cover;
+            width: 100%;
+            height: 48%;
+         }
+
+         .principal__imagem__2 {
+            height: 16rem;
+            display: flex;
+        }
+
+  }
+
+  @media screen and (max-width: 995px),
+  screen and (max-height: 700px) {
+...
+}

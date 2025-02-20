@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>seletores</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Utilizando seletores (modificado com o seletor de tags)</h1>
+    <div class="intro">
+        <p>Utilizaremos diversos seletores para modificar os elementos html</p>
+    </div>
+    <h2>Titulo 2</h2>
+    <h3>Titulo 3</h3>
+    <p class="p">Paragrafo estilizado utilizando a class .p</p>
+    <p class="p">Paragrafo estilizado utilizando a class .p</p>
+    <p id="p">paragrafo 12</p>
+    <div class="box">
+        <p>Paragrafo dentro de box</p>
+        <h3>Titulo nao afetado pelo css</h3>  
+        <p>OUtro paragrafo dentro de box</p>
+    </div>
+    <hr>
+    <h2>Espeficidade do html</h2>
+    <pre class="pre">
+      Em caso de conflito em codigos css para estilizar um elemento html, 
+      prevalecerá o seletor de classe, caso nao haja seletor de classe, 
+      prevalecerá o que estiver por ultimo no arquivo css.
+    </pre>
+    <hr>
+    <h3>Utilizando uma função css: função calc()</h3>
+    <div class="div1"><div class="div2">teste</div></div>
+    <hr>
+    <h3>Utilizando transfor: rotate</h3>
+    <div class="caixa"></div>
+
+    <hr>
+    <h3>Importando um css com uma rule @import "style2.css"</h3>
+    <div class="css2">O css desta tag pertence ao arquivo style2.css</div>
+    <hr>
+    <h3>Utilizando media queryes com @media"</h3>
+    <div class="media">
+      Media queryes são regras que definem novos estilos
+      de css para tipos diferentes de tela, por exemplo, dispositivos móveis.
+      ex: @media (max-width: 800px) {"codigo css"}
+    </div>
+
+    <h3>Utilizando Shorthands</h3>
+    <div class="shorthands">
+      Shorthands são propiedades que podem receber mais de um valor, como por exemplo border: solid red 5px
+      ou padding: 5px 10px 10px 3px.
+    </div>
+
+  
+    <a href="/index.html"> Cique aqui para voltar (modificado por um seletor de stados a:link)</a>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Conceitos basicos em css</title>
+</head>
+<body>
+    <h1>Cascata, especificidade e herança em CSS</h1>
+    <p>Falaremos agora sobre 3 conceitos importantes em css: cascata, especificidade e herança!</p>
+    <ul>
+        <li class="cascata">Cascata: para seletores que possuem o mesmo nível de primeira camada (na mesma camada), 
+            em caso de existir duas regras para um mesmo elemento, prevalecerá quele que aparecer por ultimo
+            no documento .css. Este li possui 2 regras no arquivo css, mas apenas a ultima é funcional.</li>
+        <li class="especificidade">
+           Especificidade: Elementos que especificam mais qual objeto a regra css deve ser aplicado, tem mais prioridade.
+           Por exemplo: um seletor de classe é mais específico que um seletor de tipo(tag), pois seleciona um numer
+           menor de elementos no html. Portanto, a classe será priorizada, mesmo que o seletor tipo seja inserido
+           por ultimo na código css.
+        </li>
+        <li class="heranca">
+            Heranca: Um elemento filho em css herda de um elemento pai algumas propiedades. Por exemplo: color e font-size.
+            No entanto, nem todas as propiedades funcionam desta maneira.
+            <div>
+                <p>
+                    Por exemplo: isso é um paragrafo filho de uma div que está dentro de um li, mas mesmo assim
+                    o css é aplicado a ele.
+                </p>
+            </div> 
+         </li>
+    </ul>
+
+    <table>
+        <thead>
+            <caption>Maneiras de Controlar a herança de um atributo CSS</caption>
+        </thead>
+        <tbody>
+            <tr>
+                <th>
+                    Atributo
+                </th>
+                <th>
+                    Descrição
+                </th>
+                <th>
+                    Execução
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    inherit
+                </td>
+                <td>
+                    Estabelece a mesma estilização do elemento pai
+                </td>
+                <td>
+                    <div class="div-1">
+                        Essa div tem cor da letra por padrao azul
+                        <span class="span-1">Essa classe span também terá a cor azul</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    initial
+                </td>
+                <td>
+                    Estabelece a estilização inicial do objeto para o padrao inicial
+                </td>
+                <td>
+                    <div class="div-2">
+                        Essa div tem cor da letra por padrao azul
+                        <span class="span-2">Essa classe span terá a cor preta, que é a cor inicial (sem ser as pre-definidas pelo navegador)</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    revert
+                </td>
+                <td>
+                    Estabelece a estilização inicial do objeto para os estilos padrao do navegador
+                </td>
+                <td>
+                    <div class="div-3">
+                        Essa div tem cor da letra por padrao azul
+                        <a class="a-3" href="#">Essa tag á tera cor azul pois é o padrao do navegador</a>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    unset
+                </td>
+                <td>
+                    Estabelece a estilização inicial seguindo a que tipo de herança ele tinha (inherit, initial).
+                </td>
+                <td>
+                    <div class="div-4">
+                        Essa div tem cor da letra por padrao azul
+                        <span class="span-4">Essa classe span terá a azul, pois seu padrao é azul e inherit</span>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <h2>Resetando todas as propriedades de herança</h2>
+    <p>A div abaixo possui um estilo específico</p>
+    <div class="all">
+        <p>Estilo da div</p>
+    </div>
+    <div id="all" class="all">
+        <p>Estilo não aplicado para esta div</p>
+    </div>
+
+
+    <p style="background-color: yellow;" class="p-1" id="p-1">Estilos inline possuem prioridade sobre todos os outros </p>
+
+    <a href="/index.html">Voltar para o inicio</a>
+</body>
+</html>

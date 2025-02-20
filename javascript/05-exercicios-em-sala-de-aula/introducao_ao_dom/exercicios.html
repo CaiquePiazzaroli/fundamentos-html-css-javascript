@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex4</title>
+    <style>
+        .corParagrafo {
+            background-color: brown;
+            
+        }
+    </style>
+    <style>
+        #animateMe {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: relative;
+            transition: width 2s, height 2s, background-color 2s; 
+            /* Define o tempo que cada atributo irá levar para ser alterado */
+        }
+    </style>
+</head>
+<body>
+
+
+</body>
+<script defer>
+    // ------------- ex4
+    //Criando um elemento
+    let newElement = document.createElement("p");
+    //Adicionadno conteúdo à tag
+    newElement.textContent = "Este conteudo foi adicionado com javascript";
+    //Adicionando a propriedade class ao parágrafo com setAttribute
+    newElement.setAttribute("class", "corParagrafo");
+    //Selecionando o elemento pai
+    let elementoPai = document.querySelector("body");
+    //Inserindo um elemento filho dentro do elemento pai
+    elementoPai.appendChild(newElement);
+
+    // ------------- ex5 - removendo um elemento
+    // criando um botao que irá acionar um evento
+    const buttonRemove = document.createElement("button");
+    buttonRemove.textContent = "Remover o paragrafo acima";
+    buttonRemove.addEventListener("click", () => {
+        newElement.remove();
+    })
+
+    //adicionando o botao ao body
+    elementoPai.appendChild(buttonRemove);
+
+    // ------------ ex6 - Lidando com eventos
+    // Criando um botao que irá realizar um alert
+    const buttonAlert = document.createElement("button");
+    buttonAlert.textContent = "Alertar";
+
+    //Adicionando o evento addEventListener
+    buttonAlert.addEventListener("click", () => {
+        window.alert("olá, mundo!");
+    }) 
+
+    //Adicionando ao body
+    elementoPai.appendChild(buttonAlert);
+
+    //-----------ex7 acessando elementos do dom
+    //Criando uma div e adicionado ao body
+    const divWithParagraph = document.createElement("div");
+    elementoPai.appendChild(divWithParagraph);
+
+
+    //Criando 2 paragrafos e adicionando na div
+    for(let i= 0; i < 4; i++){
+        const paragraphDiv = document.createElement("p");
+        paragraphDiv.textContent= `Paragrafo ${i+1}`;
+        divWithParagraph.appendChild(paragraphDiv);
+    }
+
+    //Acessando os elementos
+    console.log(divWithParagraph.children) //Retorna uma coleção com os filhos da tag div
+    console.log(divWithParagraph.firstChild) //Retorna o primeiro elemento da tag div
+    console.log(divWithParagraph.lastChild) //Retorna o ultimo elemento da tag div
+    console.log(divWithParagraph.nextElementSibling) //Retorna proximo IRMÃO do elemento div (null)
+    console.log(divWithParagraph.previousElementSibling ) //Retorna o IRMÃO anterior do elemento div (button)
+
+    // ------------- ex8 Criando
+    //Criando uma tag form e adicionando um atributo id
+    const formElement = document.createElement("form");
+    formElement.setAttribute("id", "meuform");
+
+    //criando e adicionando as tags input's
+    let inputForm = document.createElement("input");
+    inputForm.setAttribute("type", "text");
+    inputForm.setAttribute("value", "Initial Value");
+    inputForm.setAttribute("id", `exampleInput1`);
+    inputForm.style.display ="block";
+    formElement.appendChild(inputForm);
+
+    //Criando um botão para enviar os dados
+    const buttonForm = document.createElement("button");
+    buttonForm.type = "submit";
+    buttonForm.textContent = "Enviar";
+    formElement.appendChild(buttonForm);
+
+    //Adicionando o form no body
+    elementoPai.appendChild(formElement);
+
+    //Selecionando o elemento input
+    let inputSelected = document.querySelector("#exampleInput1");
+    console.log(inputSelected.value); //Retorna o valor do value
+    inputSelected.value = "Esse valor de value foi alterado";
+
+    //Removendo o comportamento padrão do form
+    formElement.addEventListener("submit", (e) => {
+        e.preventDefault(); // evitando o comportamento padrao do form
+
+        let inputValue = inputSelected.value;
+        console.log("Form enviado com o input:", inputValue);
+    })
+
+    // --------------- ex9 Buscando dados em uma api
+    //Buscando os dados na api
+    fetch('https://jsonplaceholder.typicode.com/posts')
+    .then(response => response.json())
+    .then(data => {
+            console.log(typeof(data)); //Data é um objeto que contem outros objetos
+            data.forEach(post => {
+                //Criando um paragrafo para receber os dados
+                console.log(post); //Cada post é um dicionario (objetos)
+                const fetchParagraph = document.createElement("p");
+                fetchParagraph.textContent = post.title + " - ";              
+                fetchParagraph.style.display = "inline";  
+                elementoPai.appendChild(fetchParagraph);
+            })
+    })
+    .catch(error => {
+        console.error('Errou ao processar os dados: ', error);
+    });
+
+    // -------------- ex10 animação e tranição
+    //Criando os elementos div e button
+    const divAnimation = document.createElement("div");
+    divAnimation.setAttribute("id","animateMe");
+    elementoPai.appendChild(divAnimation);
+
+    const buttonAnimate = document.createElement("button");
+    buttonAnimate.setAttribute("id", "animateButton");
+    buttonAnimate.textContent = "Botão de animação";
+    elementoPai.appendChild(buttonAnimate);
+
+    //Selecionando o botao e a div
+    let divAnimationSelected = document.getElementById("animateMe");
+    let buttonAnimationSelected = document.getElementById("animateButton");
+
+    //Função que será executada com o evento
+    function animacao () {
+        divAnimationSelected.style.width ="300px";
+        divAnimationSelected.style.height ="300px";
+        divAnimationSelected.style.backgroundColor = "red";
+    }
+
+    buttonAnimationSelected.addEventListener("click", animacao);
+
+    //Fazendo o elemendo andar paraa o lado
+    let position = 0;
+    function paraDireita() {
+        if(position < 350) {
+            position++;
+            divAnimationSelected.style.left = position + "px";
+        } else {
+            clearInterval(interval);
+        }
+    }
+
+    let interval = setInterval(paraDireita, 10);
+
+</script>
+   
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            display: flex;
+            min-height: 100vh;
+            color: white;
+            font-size: 36px;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+
+        nav {
+            flex-grow: 0.8;
+            background-color: orange;
+        }
+
+        .container {
+            flex-grow: 4;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container main{
+            flex: 5;
+            background-color: rgb(245, 102, 219);
+            
+        }
+
+        .container header {
+            background-color: rgb(73, 93, 250);
+            flex: 1;
+        }
+
+        .container footer {
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        Navbar
+    </nav>
+    <div class="container">
+        <header>Canecalho</header>
+        <main>Conteudo</main>
+        <footer>Rodape</footer>
+    </div>
+</body>
+</html>

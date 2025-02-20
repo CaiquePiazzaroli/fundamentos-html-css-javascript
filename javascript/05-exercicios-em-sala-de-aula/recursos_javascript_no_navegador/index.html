@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos de Javascript no Navegador</title>
+    <!-- <script async src="script1.js"></script>
+    <script src="script2.js"></script> -->
+
+</head>
+<body>
+    <p id="viewport"></p>
+    <hr>
+    <a href="back.html">Ir para o back html</a>
+    <hr>
+    <a href="#" onclick="coletarPessoas()">Coletar pessoas</a>
+    <hr>
+    <a href="#" onclick="verificarIdade()">Verificar Idade</a>
+    <hr>
+    <a href="#" onclick="setarNomeLocalStorage()">Armazenar nome no localstorage</a>
+</body>
+<script>
+    // ----- EX1
+    document.getElementById("viewport").innerHTML = `Largura da página: ${window.innerWidth} | Altura da página ${window.innerHeight}`;
+    
+    // ----- EX3
+    function coletarPessoas() {
+            const pessoas = [];
+            while (true) {
+                const nome = window.prompt("Digite o nome da pessoa (ou 'parar' para encerrar):");
+                if (nome.toLowerCase() === "parar") {
+                    break;
+                }
+                const idadeInput = window.prompt("Digite a idade da pessoa:");
+                pessoas.push({ nome, idadeInput });
+            }
+            console.table(pessoas);
+            // console.log(pessoas);
+        }
+
+    // ------ EX4
+    function verificarIdade() {
+        let perguntaIdade = window.prompt("Qual a sua idade");
+        if(perguntaIdade >= 18) {
+            window.alert("Acesso liberado");
+        } else {
+            window.alert("Acesso negado");
+            let tentarNovamente = window.confirm("Deseja tentar novamente ?");
+            if(tentarNovamente) {
+                verificarIdade();
+            }
+        }
+    }
+    // ------ EX5
+    function setarNomeLocalStorage(){
+        if(!localStorage.getItem("nome")){
+            let nome = window.prompt("Qual o seu nome");
+            localStorage.setItem("nome", nome);
+        }
+        alert(localStorage.getItem("nome"));
+    }
+</script>
+</html>

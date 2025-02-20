@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .highlight { 
+        background-color: yellow; 
+        } 
+        .hidden { 
+        display: none; 
+        } 
+    </style>
+</head>
+    <body>
+        <header>
+            <h1 id="main-title">Bem-vindo ao Exemplo de Manipulação DOM</h1>
+            <nav>
+                <ul id="menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="home">
+                <h2>Seção Home</h2>
+                <p class="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button id="btn-home">Clique Aqui</button>
+            </section>
+            <section id="about">
+                <h2>Sobre Nós</h2>
+                <p class="info">Informações sobre nossa empresa.</p>
+                <ul class="team">
+                    <li class="member">João</li>
+                    <li class="member">Maria</li>
+                    <li class="member">Carlos</li>
+                </ul>
+            </section>
+            <section id="services">
+                <h2>Nossos Serviços</h2>
+                <ul class="services">
+                    <li>Desenvolvimento Web</li>
+                    <li>Design Gráfico</li>
+                    <li>Marketing Digital</li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Exemplo de Manipulação DOM</p>
+        </footer>
+        <script>
+            //Selecionando o titulo principal e exibindo ele no console
+            const textoPrincipal = document.querySelector("h1");
+            console.log(textoPrincipal.textContent)
+
+            //Alterando o texto do botão da seção home
+            const botaoHome = document.querySelector("button");
+            botaoHome.textContent = "Bem-Vindo";
+
+            //Adcionando um item extra ao menu de navegação com o nome de blog
+            const menuNavegacao = document.getElementById("menu");
+            let li = document.createElement("li");
+            let a = document.createElement("a");
+            li.appendChild(a);
+            a.setAttribute("href", "#blog");
+            a.textContent="Blog";
+            menuNavegacao.appendChild(li);
+
+            //Removendo o primeiro membro da lista team
+            const teamList = document.querySelector('.team');
+            // Remove o primeiro elemento da lista
+            teamList.removeChild(teamList.firstElementChild);
+            
+
+            //Selecionando o paragrafo services
+            const servicesParagraph = document.querySelector(".services");
+            servicesParagraph.classList.add("highlight");
+
+            //Adicionando um atributo para todos os itens do menu de navegação
+            let itensMenu = menuNavegacao.querySelectorAll("li > a");
+            itensMenu.forEach((x) => {
+                x.setAttribute("target", "_blank");
+            })
+
+            //Criando um novo paragrafo antes da tag serviços
+            let promo = document.createElement("p");
+            promo.textContent = "Promoção de 50%";
+            //Selecionando a section
+            let section = document.querySelector("#services");
+            section.insertBefore(promo, servicesParagraph);
+
+            //Movendo o paragrafo sobre nos para o final
+            let paragrafoSobre = document.querySelector(".info");
+            let serctionAbout = document.getElementById("about");
+            serctionAbout.appendChild(paragrafoSobre);
+        </script>
+    </body>
+</html>

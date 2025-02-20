@@ -1,0 +1,148 @@
+/* PADRÃO */
+* {
+    margin:0;
+    box-sizing: border-box; 
+}
+
+html {
+    font-size: 12pt; /*  valor base para a unidade rem */
+}
+
+/* HEADER */
+header{
+    background-color: darkslategray;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    color: white;
+    font-size: 4.0rem;
+}
+
+
+/* CONTAINER */
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    /* height: 100vh; */
+    height: calc(100vh - 5%); /*Corrige footer escondido*/
+    
+}
+
+/* NAVIGATION */
+.navigation{
+    background-color: aliceblue;
+    flex-grow: 0.5;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+}
+
+.navigation nav {
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 20px;
+    margin-left: 20px; */
+}
+
+/* CONTENT */
+.content{
+    background-color: floralwhite;
+    /* flex-grow: 4;
+    flex-shrink: 4;
+    flex-basis: 0; */
+    /* flex: 4 4 0; */
+    flex: 4;
+}
+
+.container img {
+    width: 100%;
+}
+
+.img-container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.content h1 {
+    font-size: 2.0rem;
+}
+
+.content article {
+    max-width: 80%;
+}
+
+.content figure {
+    margin-top: 20px;
+}
+
+.position-container {
+    width: 400px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: aquamarine;
+    position: relative;
+}
+
+.box-red, .box-blue {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+
+.box-red {
+    background-color: red;
+    position: absolute;
+    left: 150px;
+}
+
+.box-blue {
+    background-color: blue;
+    position: relative;
+    top: 150px;
+}
+
+/* ADVERTISING */
+.advertising {
+    background-color: cornflowerblue;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+}
+
+/* .advertising > div {
+    margin-top: 20px;
+    margin-left: 20px;
+} */
+
+.advertising h3 {
+    color: white;
+    font-size: 2rem;
+}
+
+.advertising p {
+    color: white;
+    font-size: 2rem;
+}
+
+/* FOOTER */
+footer{
+    background-color: grey;
+    height: fit-content;
+    text-align: center;
+}
+
+footer p {
+    color: white;
+    font-size: 1.2rem;
+    padding: 20px 0;
+}
+
+
+/* UTILS */
+.margin-lt{
+    margin-top: 20px;
+    margin-left: 20px;
+}

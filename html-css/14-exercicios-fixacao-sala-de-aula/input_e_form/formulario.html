@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form div {
+            margin-top: 10px;
+        }
+
+        form label {
+            /* Atividade width e height para o elemento */
+            display: inline-block;
+            /* Define um mesmo tamanho para os labels */
+            min-width: 100px;
+            /* Alinha o texto à direita */
+            text-align: right;
+        }
+
+        form input,
+        form textarea {
+            font: 1rem sans-serif;
+            width: 200px;
+            /* Inclui a borda no cálculo das dimensões do elemento */
+            box-sizing: border-box;
+        }
+
+        form textarea {
+            /* Alinha o texto com a parte de cima do textarea */
+            vertical-align: top;
+            min-height: 100px;
+        }
+
+        form button {
+            padding: 5px;
+            background-color: aquamarine;
+            box-shadow: 2.5px -2.5px gray;
+            border-radius: 10px;
+        }
+
+        form button:hover {
+            background-color: aqua;
+            box-shadow: 2.5px -2.5px blue;
+        }
+
+        #div-btn {
+            /* Centraliza o botão */
+            text-align: center;
+        }
+
+        input:valid {
+            border: 2px solid greenyellow;
+        }
+
+        input:invalid {
+            border: 2px dashed red;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="https://posttestserver.dev/p/tgkwvz31j7i5nc7u/post" method="POST" onsubmit="sendData(event)">
+        <fieldset>
+            <legend>Contato</legend>
+            <div>
+                <label for="nome">Nome:</label>
+                <input id="nome" name="nome" type="text" minlength="3" maxlength="20" required>
+            </div>
+            <div>
+                <label for="email">E-mail:</label>
+                <input id="email" name="email" type="email" required>
+            </div>
+            <div>
+                <label for="idade">Idade:</label>
+                <input id="idade" name="idade" type="number" min="16" required>
+            </div>
+            <div>
+                <label for="tel">Telefone:</label>
+                <input id="tel" name="tel" pattern="^\(\d{2}\) 9\d{4}-\d{4}$" placeholder="(xx) 9xxxx-xxxx" required>
+            </div>
+            <div>
+                <label for="escolar">Escolaridade:</label>
+                <input id="escolar" name="escolar" type="text" pattern="Fundamental|Médio|Superior" required>
+            </div>
+            <div>
+                <label for="msg">Messagem:</label>
+                <textarea id="msg" name="msg" required>
+                </textarea>
+            </div>
+            <div id="div-btn">
+                <button type="submit">Envie sua mensagem</button>
+            </div>
+        </fieldset>
+    </form>
+
+    <script>
+        function sendData(event) {
+            // Desabilita a submissão automática do formulário
+            event.preventDefault();
+
+            // Cria um objeto que representa um Formulário
+            const formData = new FormData(event.target);
+
+            console.log(formData.get("nome"));
+            console.log(formData.get("email"));
+            console.log(formData.get("msg"));
+
+            // Imprime todos os campos
+            alert(JSON.stringify(Object.fromEntries(formData.entries())))
+            const url = event.target.action;
+            // envie os dados pelo Javascript com fetch
+            fetch(
+                url,
+                {
+                    method: "POST",
+                    body: formData
+                }
+            ).then(
+                () => {
+                    alert("Mensagem enviada com sucesso");
+                    document.location.reload();
+                }
+            )
+        }
+
+        const inputEscolar = document.getElementById("escolar");
+        inputEscolar.oninput = (event) => {
+             // Status de todas as validações do input
+            const validade = inputEscolar.validity;
+            console.log(validade);
+            if (validade.patternMismatch) {
+                inputEscolar.setCustomValidity("Insira 'Fundamental', 'Superior' ou 'Médio'");
+            } else {
+                // Limpa a mensagem quando o valor é válido
+                inputEscolar.setCustomValidity("");
+            }
+        }
+    </script>
+</body>
+
+</html>

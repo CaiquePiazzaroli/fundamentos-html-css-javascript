@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template 1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 100vh;
+        }
+
+        html {
+            font-size: 32px;
+        }
+
+        .cabecalho {
+            text-align: center;
+            height: 10vh;
+            background-color: rgb(80, 80, 255);
+           
+        }
+
+        .cabecalho header {
+            margin: auto;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .container main {
+            flex-grow: 3;
+            display: flex;
+            margin: auto;
+            height: 80vh;
+            background-color: orange;
+        }
+
+        .container main p {
+            margin: auto;
+        }
+
+        .barra_lateral {
+            background-color: rgb(250, 88, 88);
+            display: flex;
+        }
+
+        .barra_lateral p {
+            margin: auto;
+        }
+
+        .navegacao{
+            background-color: rgb(122, 247, 230);
+            display: flex;
+        }
+
+        .navegacao p {
+            margin: auto;
+        }
+
+        .rodape{
+            background-color: rgb(87, 87, 255);
+            height: 10vh;
+            display: flex;
+        }
+
+        .rodape footer {
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cabecalho">
+        <header>Cabecalho</header>
+    </div>
+    <div class="container">
+        <main>
+            <p>Conteúdo</p>
+        </main>
+        <aside class="barra_lateral"><p>Barra Lateral</p></aside>
+        <aside class="navegacao"><p>Navegacao</p></aside>
+    </div>
+    <div class="rodape">
+        <footer>
+            rodape
+        </footer>
+    </div>
+</body>
+
+</html>

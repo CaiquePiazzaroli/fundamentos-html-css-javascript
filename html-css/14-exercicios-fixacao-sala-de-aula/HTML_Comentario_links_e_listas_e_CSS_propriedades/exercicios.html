@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            text-align: center;
+            padding: 0em 5em 0 5em;
+            font-size: 25px;
+        }
+
+        .enunciado {
+            border: black 2px solid;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .resposta{
+            background-color: rgba(243, 243, 146, 0.5);
+            padding: 25px;
+            margin-top: 5px;
+            border: yellow 2px solid;
+        }
+
+        .link__curso{
+            list-style-type: none;
+            font-size: 30px;
+            color: rgb(255, 255, 255);
+            background-color: rgb(128, 0, 255);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .link__curso:hover{
+            color: rgb(0, 0, 0);
+            background-color: rgb(211, 167, 255);
+            transition: 1s;
+        }
+
+        img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+            border: solid black 5px;
+        }
+
+
+        img:hover {
+            opacity: 0.8;
+            transition: 0.5s;
+        }
+
+        ul{
+            text-align: left;
+            list-style: square inside url("quadrado.gif");
+            width: 50%;
+        }
+
+
+        dl{
+            text-align: left;
+            width: 50%;
+        }
+
+        dt {
+            background-color: orange;
+        }
+        dd {
+            background-color: rgba(255, 166, 0, 0.521);
+        }
+
+        .ex4 {
+            display: flex;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Atividade de participação 2 </h1>
+    <!-- Questao 1 -->
+    <div class="enunciado">
+        <h2>Questao 1</h2>
+        <p>Você recebeu o seguinte texto:</p>
+        <p>
+            "Descubra o fascinante mundo da ciência de dados, explorando cursos avançados, participando de comunidades
+            especializadas e acompanhando as últimas pesquisas. A cada clique, novas oportunidades de aprendizado se
+            revelam."
+        </p>
+        <p>
+            Converta o texto para HTML e crie um link para um curso avançado de ciência de dados de sua escolha. Em
+            seguida, utilize CSS para estilizar o link, definindo uma cor de texto diferente da padrão.
+        </p>
+    </div>
+    <div class="resposta">
+    <p>Resolução:</p>
+        <p>
+            "Descubra o fascinante mundo da ciência de dados, explorando cursos avançados, participando de comunidades
+            especializadas e acompanhando as últimas pesquisas. A cada clique, novas oportunidades de aprendizado se
+            revelam."
+        </p>
+        <a class="link__curso" href="https://github.com/CaiquePiazzaroli">
+            Acesse o curso completo aqui!
+        </a>
+    </div>
+    <hr>
+    <!-- Questao 2 -->
+    <div class="enunciado">
+        <h2>Questao 2</h2>
+        <p>Você recebeu o seguinte texto:</p>
+        <p>
+            "Navegue por seções como 'Introdução', 'Aplicações' e 'Ferramentas' para obter uma visão abrangente do
+universo da inteligência artificial. A busca pelo conhecimento nunca foi tão guiada e envolvente.""
+        </p>
+        <p>
+            Transforme o texto em HTML e crie links internos para as seções mencionadas. Pesquisa por conta conteúdo
+para as seções 'Introdução', 'Aplicações' e 'Ferramentas' dentro da própria página. Em seguida, aplique os
+estilos CSS de sua preferência (tamanho, cor e estilo) aos links internos.
+        </p>
+    </div>
+    <div class="resposta">
+    <p>Resolução:</p>
+        <p>
+            "Navegue por seções como <a href="introducao.html">'Introdução'</a>, <a href="aplicacoes.html">'Aplicações'</a> e <a href="ferramenta.html">'Ferramentas'</a> para obter uma visão abrangente do
+universo da inteligência artificial. A busca pelo conhecimento nunca foi tão guiada e envolvente.""
+        </p>
+    </div>
+    <hr>
+    <!-- Questao 3 -->
+    <div class="enunciado">
+        <h2>Questao 3</h2>
+        <p>Você recebeu o seguinte texto:</p>
+        <p>
+            "Explore as maravilhas do espaço sideral com imagens deslumbrantes de galáxias, nebulosas e planetas
+distantes. Cada imagem é uma janela para o infinito."
+        </p>
+        <p>
+            Converta o texto para HTML e adicione três imagens vinculadas a fotos espaciais. Cada foto deve ser um link
+            para uma página da web da galáxias, nebulosa ou planeta distante escolhido. Pesquise você mesmo as fotos.
+            Em seguida, aplique estilos CSS às imagens para garantir que tenham uma borda sólida de 2 pixels e sejam
+            arredondas em 5px.
+        </p>
+    </div>
+    <div class="resposta">
+    <p>Resolução:</p>
+        <a href="https://spacetoday.com.br/">
+            <img src="galaxia1.jpg" alt="imagem de uma galáxia">
+        </a>
+        <a href="https://www.nasa.gov/">
+            <img src="galaxia2.jpeg" alt="imagem de uma galáxia">
+        </a>
+        <a href="https://brasilescola.uol.com.br/geografia/galaxia.htm">
+            <img src="galaxia3.jpg" alt="imagem de uma galáxia">
+        </a>
+    </div>
+    <hr>
+    <!-- Questao 4 -->
+    <div class="enunciado">
+        <h2>Questao 4</h2>
+        <p>Você recebeu o seguinte texto:</p>
+        <pre style="text-align: left;">
+            Exploração Subaquática
+            Explore as maravilhas subaquáticas através de nossos artigos,
+            vídeos educativos e guias interativos. De recifes de coral a criaturas
+            misteriosas,
+            há um vasto oceano de conhecimento para mergulhar.
+            Recursos Disponíveis:
+            - Artigos
+            - Vídeos Educativos
+            - Guias Interativos
+            Detalhes:
+            - Recifes de Coral
+            - Descubra a diversidade e a importância dos recifes de coral
+            em nossos artigos especializados.
+            - Criaturas Misteriosas
+            - Explore vídeos educativos que revelam criaturas subaquáticas
+            fascinantes e muitas vezes misteriosas.
+        </pre>
+        <p>
+            Converta o texto para HTML utilizando uma lista não ordenada e lista de descrição. Utilize CSS, tomando
+atenção para estilizar as listas, ajustando a cor e estilizando os bullets dos itens com uma pequena imagem de
+um quadrado (baixe a imagem) ao invês do símbolo padrão, que é um círculo.
+        </p>
+    </div>
+    <div class="resposta">
+        <p>Resolução:</p>
+         
+        <div class="ex4">
+            <ul>
+                <li>Artigos</li>
+                <li>Vídeos Educativos</li>
+                <li>Guias Interativos</li>
+            </ul>
+            <dl>
+                <dt>Recursos Disponíveis</dt>
+                <dd>Artigos</dd>
+                <dd>Vídeos Educativos</dd>
+                <dd>Guias Interativos</dd>
+                <dt>Detalhes</dt>
+                <dd>Recifes de Coral</dd>
+                <dd>Descubra a diversidade e a importância dos recifes de coral
+                    em nossos artigos especializados.</dd>
+                <dd>Criaturas Misteriosas</dd>
+                <dd>Explore vídeos educativos que revelam criaturas subaquáticas
+                    fascinantes e muitas vezes misteriosas.</dd>
+            </dl>
+        </div>
+        
+    </div>
+    <hr>
+</body>
+</html>

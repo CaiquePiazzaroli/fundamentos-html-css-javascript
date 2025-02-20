@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position CSS</title>
+    <style>
+        .container {
+            background-color: darkgoldenrod;
+            margin-top: 400px;
+            /* Para que o absolute seja posicionado em relação ao elemento pai */
+            position: relative;
+        }
+        .muda-display {
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+        }
+        .vermelho {
+            background-color: red;
+            position: sticky;
+            /* top:100px; */
+            top: 0;
+            left: 250px;
+        }
+
+        /* .amarelo {
+            background-color: yellow;
+            position: relative;
+            top: 250px;
+            left: 15px;
+        } */
+
+        /* .amarelo {
+            background-color: yellow;
+            position: absolute;
+            bottom: 10px;
+            right: 200px;
+        } */
+
+        /* .amarelo {
+            background-color: yellow;
+            position: fixed;
+            top: 100px;
+            left: 700px;
+        } */
+
+        .amarelo {
+            background-color: yellow;
+            position: absolute;
+            left: 15px;
+            top: 15px
+        }
+
+        .azul {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+
+<body>
+    <div class="container">
+        <!-- Z index 1 -->
+        <div class="muda-display amarelo">Propaganda</div>
+        <!-- Z index 2 -->
+        <div class="muda-display vermelho"></div>
+        <!-- Z index 3 -->
+        <div class="muda-display azul"></div>
+        <h1>Seção 1</h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <h1>Seção 2</h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <h1>Seção 3</h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <h1>Seção 4</h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <h1>Seção 5</h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+</body>
+</body>
+</html>

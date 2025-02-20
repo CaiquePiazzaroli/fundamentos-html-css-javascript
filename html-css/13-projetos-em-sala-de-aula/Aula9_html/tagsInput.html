@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag input</title>
+</head>
+<body>
+    <div>
+        <span>Texto</span>
+        <!-- Evento onblur é acionado quando retira-se o foco do elmento -->
+        <!-- Evento oninput é acionado quando insere algo no campo de texto -->
+        <input type="text" name="nome" onblur='trataTexto()' oninput="trataInput()">
+    </div>
+    <div>
+        <span>password</span>
+        <input type="password" name="nome">
+    </div>
+    <div>
+        <span>CheckBox</span>
+        <input type="checkbox">
+        <input type="checkbox" oninput="trataCheckBox()">
+    </div>
+
+    <div>
+        <span>Botao</span>
+        <input type="button" value="clicar"  id="meu_btn" >
+    </div>
+
+    <div>
+        <span>Radio</span>
+        <input type="radio" name="ex_radio">
+        <input type="radio" name="ex_radio">
+        <input type="radio" name="ex_radio">
+    </div>
+    <div>
+        <span>Date</span>
+        <input type="date">
+    </div>
+
+    <div>
+        <span>Number</span>
+        <input type="number">
+    </div>
+
+    <script>
+        function trataTexto() {
+           const texto = event.target.value;
+           event.target.value = texto.toUpperCase();
+        }
+
+        function trataInput() {
+            console.log(event.target);
+        }
+
+        function trataCheckBox() {
+            if(event.target.checked){
+                console.log("checado")
+            } else {
+                console.log("não checado")
+            }
+        }
+    </script>
+</body>
+</html>

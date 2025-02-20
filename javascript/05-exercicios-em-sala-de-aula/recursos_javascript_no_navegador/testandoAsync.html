@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando Async</title>
+    <script>
+        console.time("Script com async");
+    </script>
+    <script src="script1.js" async></script>
+    <script>
+        console.timeEnd("Script com async");
+    </script>
+    <script>
+        console.time("Script sem async");
+    </script>
+    <script src="script2.js"></script>
+    <script>
+        console.timeEnd("Script sem async");
+    </script>
+</head>
+<body>
+    <h1>Titulo</h1>
+    <p>Paragrafooooo</p>
+</body>
+</html>

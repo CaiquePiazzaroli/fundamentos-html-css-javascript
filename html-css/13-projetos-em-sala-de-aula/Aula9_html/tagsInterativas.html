@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tags interativas</title>
+</head>
+<body>
+    <!-- Link -->
+     <a href="www.google.com/">Google</a>
+
+    <!-- Exibe os detalhes de uma informação -->
+     <details>
+        <summary>
+            Sumario do details
+        </summary>
+        <p>Explica melhor o termo</p>
+     </details>
+
+    <!-- O elemento HTML <label> representa uma legenda para um item em uma interface de usuário. -->
+    <label for="entrada">Clique aqui para ir para o input</label>
+    <input type="text" id="entrada">
+    <!-- o atributo type define o comportamento do botão em um form -->
+    <!-- types: button | reset | submit -->
+    <button type="submit">Enviar</button>
+
+    <!-- No Javascript, utilize objetoSelect.value para obter o valor escolhido-->
+     <select>
+        <option value="">Opções</option>
+        <option value="dog">Dog</option>
+        <option value="cat">Cat</option>
+        <option value="mouse">mouse</option>
+     </select>
+
+    <label for="mensagem">Digite sua mensagem:</label>
+    <!-- representa um controle de edição de texto sem formatação de várias
+             linhas(rows) e colunas(cols) -->
+    <textarea id="mensagem" rows="10" cols="100"></textarea> 
+    <script>
+        //Selecionado o valor do select
+        let select = document.querySelector("select");
+        select.addEventListener("input", () => {
+            console.log(select.value);
+        })
+    </script>
+</body>
+</html>

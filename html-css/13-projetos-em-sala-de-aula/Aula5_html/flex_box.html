@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <script>
+        let contador = 1;
+        setInterval(() => { 
+            if(contador%2==0){
+                let smile = document.querySelectorAll(".item");
+                for(i = 0; i < smile.length; i++){
+                    smile[i].style.height="200px";
+                    smile[i].style.width="200px";
+                    smile[i].style.transition="1s";
+                }
+                
+            } else {
+                let smile = document.querySelectorAll(".item");
+                for(i = 0; i < smile.length; i++){
+                    smile[i].style.height="160px";
+                    smile[i].style.width="180px";
+                    smile[i].style.transition="1s";
+                }
+                
+            }
+
+            contador++;
+        }, 1000)
+    </script>
+    <style>
+        *{
+            margin: 0;
+        }
+
+        .container {
+            background-color: rgb(21, 255, 0);
+            display: flex;
+            gap: 10px;
+            height: 100vh;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .item {
+            background-color: rgb(149, 255, 135);
+            width: 200px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            
+        }
+
+        .olho{
+            width: 30px;
+            height: 50px;
+            background-color: green;
+            gap: 30px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: end;
+        }
+
+        .olho_branco{
+            background-color: aliceblue;
+            width: 10px;
+            height: 20px;
+
+        }
+
+        /* .primeiro{
+            flex-grow: 1;
+        } */
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item primeiro">
+            <div class="olho">
+                <div class="olho_branco"></div>
+            </div>
+            <div class="olho">
+                <div class="olho_branco"></div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="olho">
+                <div class="olho_branco"></div>
+            </div>
+            <div class="olho">
+                <div class="olho_branco"></div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="olho">
+                <div class="olho_branco"></div>
+            </div>
+            <div class="olho">
+                <div class="olho_branco"></div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="olho">
+                <div class="olho_branco"></div>
+            </div>
+            <div class="olho">
+                <div class="olho_branco"></div>
+            </div>
+        </div>
+        
+        
+    </div>
+</body>
+</html>

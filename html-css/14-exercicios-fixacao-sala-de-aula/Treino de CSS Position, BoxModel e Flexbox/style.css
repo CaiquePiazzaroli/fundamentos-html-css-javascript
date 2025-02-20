@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Oswald", sans-serif;
+    background-color: #10375C;
+    color: #F4F6FF;
+    font-size: 16px;
+    padding: 36px;
+}
+
+.principal {
+    display: flex;
+    justify-content: center;
+}
+
+.cabecalho {
+    text-align: center;
+}
+
+.nome {
+    font-size: 36px;
+}
+
+.foto img {
+    width: 250px;
+    border-radius: 50%;
+    border: 10px #EB8317 solid;
+}
+
+.saber_mais {
+    width: calc(100vw/6);
+    height: fit-content;
+    background-color: #EB8317;
+    position:fixed;
+    top: 100px;
+    left: 0;
+    font-size:2rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 20%;
+    text-align: center;
+}
+
+.filmes {
+    width: 300px;
+    height: 200px;
+    margin: 20px;
+}
+
+.filmes h1 {
+    font-size: 1.5em;
+    color: #EB8317;
+}
+
+.filmes p {
+    font-size: 1em;
+}
+
+.nivel_de_acesso {
+    margin-top: 4px;
+}
+
+.nivel_de_acesso h3 > span {
+    padding: 0 4px;
+    background-color: #EB8317;
+}
+

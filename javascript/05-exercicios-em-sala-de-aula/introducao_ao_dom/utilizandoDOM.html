@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando elementos</title>
+    <style>
+        .tamanhoFonte {
+            font-size: 70px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Ex1 -->
+    <p id="example">Original Text Content</p>
+    <button id="changeTextButton">Change Text</button>
+    <button id="changeCSSButton">Change CSS</button>
+    <button id="changeClassButton">Change Class</button>
+    <hr>
+</body>
+<script>
+    // ----------- ex1
+    // Selecionando o elemento
+    let button = document.getElementById("changeTextButton");
+    let paragraph = document.getElementById("example");
+    button.addEventListener("click", function () {
+        paragraph.textContent = "Novo conteúdo de texto";
+    });
+
+    //--------- EX2 - Alterando o css do elemento
+    let buttonCSS = document.getElementById("changeCSSButton");
+    buttonCSS.addEventListener("click", () => {
+        paragraph.style.backgroundColor = "lightblue";
+        paragraph.style.fontSize = "20px";  
+    })
+    
+    // ------- EX2 - Adicionando classes
+    let buttonClass = document.getElementById("changeClassButton");
+    buttonClass.addEventListener("click", () => {
+        paragraph.classList.add("tamanhoFonte");
+        //paragraph.classList.remove("tamanhoFonte");
+        //paragraph.classList.toggle("tamanhoFonte");
+    })
+</script>
+</html>

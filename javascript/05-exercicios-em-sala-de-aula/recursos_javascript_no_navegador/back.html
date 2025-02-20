@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>back</title>
+</head>
+<body>
+    <p>Página back html</p>
+</body>
+<script>
+    // ----- ex2
+    window.onload = () => {
+        let tempoInicial = Date.now();
+        console.log(tempoInicial);
+
+        let verificaTempo = () => {
+            let tempoAtual = Date.now();
+            let tempoDecorrido = tempoAtual - tempoInicial;
+            if (tempoDecorrido >= 3000) {
+                clearInterval();
+                window.history.back();
+            }
+        }
+
+        setInterval(() => {
+            verificaTempo();
+        })
+    }
+</script>
+</html>

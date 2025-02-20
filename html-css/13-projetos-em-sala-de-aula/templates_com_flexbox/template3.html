@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template 3</title>
+    <style>
+
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            text-align: center;
+            font-size: 36px;
+            color: aliceblue;
+        } 
+
+        nav {
+            background-color: rgb(246, 130, 34);
+            flex:0.3;
+        }
+
+        body div{
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body div > header{
+            background-color: blue;
+            flex: 0.1;
+        }
+
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .container main {
+            flex-grow: 2;
+            background-color: brown;
+        }
+
+        .container aside {
+            background-color: blueviolet;
+        }
+
+        footer {
+            background-color:blue;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        Navegação
+    </nav>
+    <div>
+        <header>Cabecalho</header>
+        <div class="container">
+            <main>Conteudo</main>
+            <aside>Barra Lateral</aside>
+        </div>
+        <footer>Rodape</footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input e forms</title>
+    <style>
+        #quadrado {
+            width: 200px;
+            height: 200px;
+        }
+
+        .azul {
+            background-color: blue;
+        }
+
+        .amarelo {
+            background-color: yellow;
+        }
+
+
+        input:valid {
+            border: greenyellow solid;
+        }
+
+        input:invalid {
+            border: red solid;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="quadrado" class="amarelo">
+        <input type="button" value="Clique" id="botaoMudarCor">
+    </div>
+
+    <div>
+        <p id="text">JavaScript Exercises - w3resource</p>
+        <button id="jsstyle" onclick="js_style()">Style</button>
+    </div>
+
+    <div>
+        <form id="form1" onsubmit="getFormvalue(event)">
+            First name: <input type="text" name="fname" value="David" /><br />
+            Last name: <input type="text" name="lname" value="Beckham" /><br />
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+
+    <div>
+        <p>
+            <a id="w3r" type="text/html" hreflang="en-us" rel="nofollow" target="_self"
+                href="https://www.w3resource.com/">w3resource</a>
+        </p>
+        <button onclick="getAttributes()">
+            Click here to get attributes value
+        </button>
+    </div>
+
+    <div>
+        <table id="myTable" border="1">
+            <tr>
+                <td>Row1 cell1</td>
+                <td>Row1 cell2</td>
+            </tr>
+            <tr>
+                <td>Row2 cell1</td>
+                <td>Row2 cell2</td>
+            </tr>
+            <tr>
+                <td>Row3 cell1</td>
+                <td>Row3 cell2</td>
+            </tr>
+        </table>
+        <form>
+            <input type="button" onclick="changeContent()" value="Change content" />
+            <input type="button" onclick="insert_Row()" value="Insert row" />
+        </form>
+    </div>
+
+
+    <div>
+        <form>
+            <fieldset>
+                <legend>Meu formulário</legend>
+                <div>
+                    <label for="nome">Username</label><br>
+                    <input id="nome" type="text" name="nome" minlength="3" maxlength="10" required>
+                </div>
+                <div>
+                    <label for="email">Email/label<br>
+                    <input id="email" type="email" name="email" required>
+                </div>
+                <div>
+                    <label for="idade">IDade</label><br>
+                    <input id="idade" type="number" name="idade" min="16" required>
+                </div>
+                <div>
+                    <label for="telefone">Telefone</label>
+                    <input id="tel" name="tel" pattern="^\(\d{2}\) 9\d{4}-\d{4}$" placeholder="(xx) 9xxxx-xxxx" required>
+                </div>
+                <div>
+                    <label for="escolaridade">Escolaridade</label><br>
+                    <input id="escolaridade" name="escolaridade" pattern="Fundamental | Medio | Superior" required>
+                </div>
+                <div>
+                    <label for="comentario">Comentário</label>
+                    <textarea id="comentario" name="comentario"></textarea>
+                </div>
+                <div id="div-btn">
+                    <button type="submit">Envie sua mensagem</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+
+
+
+
+</body>
+<script>
+    //Altera a cor do background quando clica sobre o botao
+    let quadradoDiv = document.getElementById("quadrado");
+    let botaoAlteraCor = document.getElementById("botaoMudarCor");
+    botaoAlteraCor.addEventListener("click", () => {
+        quadradoDiv.classList.toggle("amarelo");
+        quadradoDiv.classList.toggle("azul");
+    })
+
+    //Alterando o estilo do paragrafo
+    let paragrafoEstilo = document.getElementById("text");
+    function js_style() {
+        paragrafoEstilo.style.backgroundColor = "blue";
+        paragrafoEstilo.style.fontFamily = "Arial";
+        paragrafoEstilo.style.color = "white";
+        paragrafoEstilo.style.fontSize = "32px";
+    }
+    
+    //Exibindo um alert quando a tecla ENTER for ativada
+    //adicionadno uma linha ao pressionar enter
+    window.document.body.addEventListener("keypress", () => {
+        if (event.key === "Enter") {
+            // alert("Olá mundo");
+            insert_Row();
+        }
+    })
+
+    //Capturando valores de um form com dom
+    function getFormvalue(event) {
+
+        //Impedindo o comportamento padrão deste evento (recarregar a página)
+        event.preventDefault();
+        console.log(event);
+
+        //Selecionando o form
+        const form = document.getElementById('form1');
+        let firstName = form.elements['fname'].value;
+        let lastName = form.elements['lname'].value;
+
+        // Exibe os valores em um alerta
+        alert(`First Name: ${firstName}\nLast Name: ${lastName}`);
+    }
+
+    //Pegando os atributos da tag link
+    function getAttributes() {
+        let a = document.getElementById("w3r");
+
+        let hreflang = a.getAttribute("hreflang");
+        let rel = a.getAttribute("rel");
+        let target = a.getAttribute("target");
+        let type = a.getAttribute("type");
+
+        alert(hreflang + " " + rel + " " + target + " " + type)
+    }
+
+
+    //Alterando o conteúdo de uma célula
+    function changeContent() {
+        let linha = window.prompt("Insira o número da linha");
+        let coluna = window.prompt("Insira o número da coluna");
+        let novoConteudo = window.prompt("Insira um novo conteudo");
+        let tabela = document.querySelector("#myTable > tbody");
+        tabela.children[linha-1].children[coluna-1].textContent = novoConteudo;
+    }
+
+    //Função para adicionar uma linha
+    function insert_Row() {
+        let tabela = document.querySelector("#myTable > tbody");
+        let tr = document.createElement("tr");
+        let td1 = document.createElement("td");
+        let td2 = document.createElement("td");
+        td1.textContent = "element created";
+        td2.textContent = "element created";
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tabela.appendChild(tr);
+    }
+
+    
+
+</script>
+
+</html>

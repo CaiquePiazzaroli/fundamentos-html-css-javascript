@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utilizando o dom</title>
+    
+</head>
+
+<body>
+
+</body>
+<script>
+
+    //--------- EX1
+    const titulo = document.createElement("h1");
+    titulo.textContent = "Minha primeira página html utilizando DOM"
+    document.body.appendChild(titulo);
+
+    const paragrafo = document.createElement("p");
+    paragrafo.textContent="Primeiro paragrafo utilizando DOM";
+    document.body.appendChild(paragrafo)
+
+    const tituloLista = document.createElement("p");
+    tituloLista.textContent="Menu:";
+    document.body.appendChild(tituloLista);
+
+    const lista = document.createElement("ul");
+    
+    for(let i = 0; i < 5; i++){
+        const li = document.createElement("li");
+        if(i == 0) {
+            li.classList.add("item1");
+        }
+        li.textContent = `Elemento ${i+1}`;
+        lista.appendChild(li);
+    }
+
+    document.body.appendChild(lista)
+
+    //---------- EX2
+    //Exibindo apenas o item 1 no console
+    console.log(document.querySelector(".item1"));
+
+    //Exibindo todos os itens da lista no console
+    document.querySelectorAll("ul > li").forEach((x) => {console.log(x.innerHTML)}) 
+
+</script>
+</html>

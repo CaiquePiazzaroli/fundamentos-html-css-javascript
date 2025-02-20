@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <Style>
+
+        body{
+            height: 7000px;
+            font-size: 32px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p{
+            margin: 1em;
+        }
+
+        .container {
+            height: fit-content;
+            background-color: red;
+            position: relative;
+        }
+
+        .static {
+            background-color: green;
+            height: 10em;
+            width: 10em;
+            
+        }
+
+        .relative {
+            background-color: blue;
+            color: aliceblue;
+            width: 12em;
+            height: fit-content;
+            position: relative;
+            left: 12em;
+            top: -12em;
+        }
+
+        .absolute {
+            width: 16em;
+            background-color: blueviolet;
+            position: absolute;
+            left: 50%;
+            bottom: 50%;
+        }
+
+        .fixed {
+            position: fixed;
+            background-color: rgb(50, 20, 220);
+            top: 5rem;
+            bottom: 5rem;
+            right: 5rem;
+            height: 80vh;
+            width: 10vw;
+            padding: 2rem;
+            font-size: 0.9em;
+            color: white;
+        }
+
+        .imagem {
+            width: 100%;
+            
+        }
+
+    </Style>
+
+</head>
+<body>
+    <h1>Questao 5 - Tutorial Interativo sobre positioning</h1>
+    <p>No link https://ishadeed.com/article/learn-css-positioning/#intro você terá acesso à um tutorial iterativo que
+        te ajudará a entender melhor as configurações de posicionamento dos elementos HTML por meio do CSS.
+        Teste todos os HTMLs de todos os exercícios.</p>
+    <p>Resposta</p> 
+
+    <div class="container">
+        <div class="static">
+            A Posição static é o padrao do html e não é influenciado pelos e atributos Top, botton, left e right etc. 
+            Sendo assim, esta div se encontra na posição "normal".
+        </div>
+        <div class="relative">
+            A Posição relative é a posição do html que usa como ponto inicial o estado "normal" do elemento, ou seja, o posicionamento
+            utilizando os valores top, bottom, left e right serão aplicados de acordo com seu estado inicial. Além disso, o espaço inicial
+            de onde esse elemento saiu nao pode ser ocupado por outro elemento block, como no caso da div absolute.
+        </div>
+        <div class="absolute">
+            O posicionamento absolute considera o elemento pai como refencia para se posicionar, desde que esse elemento pai não
+            seja de posicionamento static. Nesse caso, o espaço inicial do elemento, diferentemente de relative, é desconsiderado.
+        </div>
+        <div class="fixed">
+            O posicionamento fixed toma como referencia a viewport do usuário, ou seja, fica na tela o tempo todo. E bem parecido com
+            o absolute mas nesse caso o fixed toma como refecia a viewport. 
+            <img class="imagem" src="img/sekiro.png" class="imagem aleatoria de algo">
+        </div>
+    </div>
+    
+
+
+</body>
+</html>
